@@ -96,7 +96,6 @@ const GalleryV2: React.FC = () => {
       projects.push(mesh);
       createCaption(project.title, mesh);
     });
-    console.log("Projects created:", projects.length);
   };
 
   const createCaption = (title: string, mesh: THREE.Mesh) => {
