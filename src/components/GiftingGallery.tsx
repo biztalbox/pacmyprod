@@ -16,17 +16,28 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
     let mouse = new THREE.Vector2();
     let isDragging = false;
     let dragStartX = 0;
+    const [isMounted, setIsMounted] = useState(false);
 
     const projectsData = [
         { title: 'Portrait 1', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
         { title: 'Portrait 2', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
         { title: 'Portrait 3', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
         { title: 'Portrait 4', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
+        { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
+        { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
+        { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
+        { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
+        { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
+        { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' },
         { title: 'Portrait 5', image: '/md_slide.jfif', mobileImage: '/portrait.jfif' }
     ];
 
     useEffect(() => {
-        if (isOpen) {
+        setIsMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (isOpen && isMounted) {
             init();
             if (/Mobi|Android/i.test(navigator.userAgent)) {
                 requestGyroPermission();
@@ -65,13 +76,13 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
                 window.removeEventListener('deviceorientation', handleOrientation);
             }
         };
-    }, [isOpen]);
+    }, [isOpen, isMounted]);
 
     useEffect(() => {
-        if (projects.length > 0) {
-            transitionToProject(0); // Display the first project on component mount
+        if (isMounted && projects.length > 0) {
+            transitionToProject(0);
         }
-    }, [projects]);
+    }, [projects, isMounted]);
 
     const init = () => {
         scene = new THREE.Scene();
@@ -89,20 +100,18 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
             createMobileProjects();
         } else {
             camera.position.z = 12;
-            createProjects();
+            createProjects().then(() => {
+                // Show the first project by default after projects are created
+                if (projects.length > 0) {
+                    transitionToProject(0); // Display the first project
+                } else {
+                    console.error("No projects available to display."); 
+                }
+            });
         }
 
         // Debugging logs
         console.log("Projects created:", projects.length); // Log the number of projects created
-
-        // Show the second project (index 1) by default
-        if (projects.length > 1) {
-            transitionToProject(1); // Show the second project
-        } else if (projects.length === 1) {
-            transitionToProject(0); // Show the first project if only one is available
-        } else {
-            // console.error("No projects available to display."); 
-        }
 
         // Add event listeners scoped to the section
         sectionRef.current?.addEventListener('mousemove', onMouseMove);
@@ -162,32 +171,32 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
     };
 
     const createProjects = () => {
-        projectsData.forEach((project, index) => {
-            const image = new Image();
-            image.src = project.image; // Load the image to get its dimensions
-            image.onload = () => {
-                const geometry = new THREE.PlaneGeometry(image.width / 100, image.height / 100); // Use original dimensions (scaled down)
-                const texture = new THREE.TextureLoader().load(project.image, () => {
-                    renderer.render(scene, camera);
-                });
-                const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0 });
-                const mesh = new THREE.Mesh(geometry, material);
-                mesh.position.x = index * (image.width / 100 + 5); // Adjust position based on image width
-                scene.add(mesh);
-                projects.push(mesh);
-                createCaption(project.title, mesh);
-                
-                // Add mouse move effect
-                mesh.userData = { mesh }; // Store mesh reference
-            };
+        return new Promise<void>((resolve) => {
+            let loadedCount = 0; // Track loaded textures
+            projectsData.forEach((project, index) => {
+                const image = new Image();
+                image.src = project.image; // Load the image to get its dimensions
+                image.onload = () => {
+                    const geometry = new THREE.PlaneGeometry(image.width / 100, image.height / 100); // Use original dimensions (scaled down)
+                    const texture = new THREE.TextureLoader().load(project.image, () => {
+                        loadedCount++; // Increment loaded count
+                        renderer.render(scene, camera);
+                        if (loadedCount === projectsData.length) {
+                            resolve(); // Resolve the promise when all projects are loaded
+                        }
+                    });
+                    const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0 });
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.position.x = index * (image.width / 100 + 5); // Adjust position based on image width
+                    scene.add(mesh);
+                    projects.push(mesh);
+                    createCaption(project.title, mesh);
+                    
+                    // Add mouse move effect
+                    mesh.userData = { mesh }; // Store mesh reference
+                };
+            });
         });
-        console.log("Desktop projects created:", projects.length);
-        
-        // Set the first project active by default
-        if (projects.length > 0) {
-            gsap.to(projects[0].material, { opacity: 1, duration: 1.2, ease: "power3.inOut" });
-            transitionToProject(0); // Transition to the first project
-        }
     };
 
     const createCaption = (title: string, mesh: THREE.Mesh) => {
@@ -238,7 +247,7 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
 
     const onScroll = (event: WheelEvent) => {
         if (isTransitioning || !isMouseInside) return; // Check if mouse is inside
-        const newProject = (event.deltaY > 0) ? (currentProject + 1) % projects.length : (currentProject - 1 + projects.length) % projects.length;
+        const newProject = (event.deltaY > 0) ? (currentProject - 1 + projects.length) % projects.length : (currentProject + 1) % projects.length;
         setCurrentProject(newProject); // Use setCurrentProject to update the state
         transitionToProject(newProject);
     };
@@ -282,11 +291,11 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
     const onMouseMove = (event: MouseEvent) => {
         if (isDragging) {
             const dragDistance = event.clientX - dragStartX;
-            if (dragDistance < -50) { // Drag left (now goes to next)
-                handleNext();
-                dragStartX = event.clientX; // Reset start position
-            } else if (dragDistance > 50) { // Drag right (now goes to previous)
+            if (dragDistance < -50) { // Drag left (now goes to previous)
                 handlePrev();
+                dragStartX = event.clientX; // Reset start position
+            } else if (dragDistance > 50) { // Drag right (now goes to next)
+                handleNext();
                 dragStartX = event.clientX; // Reset start position
             }
         }
@@ -324,10 +333,10 @@ const GiftingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
     const onTouchMove = (e: TouchEvent) => {
         if (isDragging) {
             const dragDistance = e.touches[0].clientX - dragStartX;
-            if (dragDistance > 50) { // Drag right
+            if (dragDistance < -50) { // Drag left (now goes to previous)
                 handlePrev(); // Navigate to the previous project
                 isDragging = false; // Reset dragging state
-            } else if (dragDistance < -50) { // Drag left
+            } else if (dragDistance > 50) { // Drag right (now goes to next)
                 handleNext(); // Navigate to the next project
                 isDragging = false; // Reset dragging state
             }

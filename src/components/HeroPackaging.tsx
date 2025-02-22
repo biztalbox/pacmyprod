@@ -20,7 +20,7 @@ const HeroHome2 = () => {
             <section className="bg-gradient-to-b md:bg-gradient-to-r from-secondary to-foreground relative">
                 <div className="flex w-full responsive_box relative">
                     {/* Left Section: Packaging */}
-                    <a href="/packaging" className="md:w-1/2 container py-24 mr-auto text-white md:min-h-screen flex flex-col gap-10 relative group md:packaging 2xl:max-w-[600px] float-start">
+                    <a onClick={openGallery} className="md:w-1/2 container py-24 mr-auto text-white md:min-h-screen flex flex-col gap-10 relative group md:packaging 2xl:max-w-[600px] float-start">
 
                         <div className="flex flex-col items-center md:items-start">
                             <h1 className="whitespace-nowrap">Kapa Boxes</h1>
