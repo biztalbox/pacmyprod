@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #f2233e;
+  /* Primary color */
+  --secondary: rgba(36, 36, 36, 0.925);
+  /* Secondary color */
+  --accent: #574240;
+  /* Accent color */
+  --neutral: #ffe4df;
+  /* Neutral color */
+  --background: #000000;
+  /* Background color set to black */
+  --foreground: #ffffff;
+  /* Foreground color set to white */
+  --white: #ffffff;
+  /* White color */
+  --overlay: #00000031;
+  /* Overlay color set to black */
+  @apply bg-background
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  /* Center the container and add responsive padding */
+  @apply max-w-screen-2xl;
+  /* Set a maximum width for larger screens */
+}
+
+.responsive_box {
+  @apply flex-col md:flex-row;
+}
+
+
+
+@media (min-width: 768px) {
+  .packaging {
+    clip-path: polygon(0% 0%, 100% 0, 96% 47%, 92% 100%, 0% 100%);
+  }
+
+  .gifting {
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 4% 43%);
+  }
+}
+
+h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+}
+
+h2 {
+  @apply text-3xl md:text-5xl font-bold leading-tight;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl lg:text-4xl leading-snug;
+}
