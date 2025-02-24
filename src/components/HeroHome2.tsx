@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react';
-import GiftingGallery from './GiftingGallery';
+import GalleryV3 from './GalleryV3';
 import Counter from './Counter';
+import GiftingGallery from './GiftingGallery';
 
 
 const HeroHome2 = () => {
@@ -31,7 +32,7 @@ const HeroHome2 = () => {
                         <div className="flex flex-col md:flex-row items-start gap-5 order-2 md:order-1">
 
                             <div className="mt-4 text-lg text-center md:text-start">
-                                <p>Quality & Sustainability Combined</p>
+                                <p><b>Click to view our gallery</b></p>
                                 <p>We prioritize eco-friendly materials and innovative designs</p>
                             </div>
                             <img src="/collage.png" alt="Packaging" className="rounded order-1 md:order-2 w-96" />
@@ -45,7 +46,7 @@ const HeroHome2 = () => {
                             <div className="flex flex-col md:flex-row items-start gap-5 md:justify-bet">
                                 <img src="/collage.png" alt="Packaging" className="rounded w-96" />
                                 <div className="mt-4 text-lg text-center md:text-end">
-                                    <p>Quality & Sustainability Combined</p>
+                                    <p><b>Click to view our gallery</b></p>
                                     <p>We prioritize eco-friendly materials and innovative designs.</p>
                                 </div>
                             </div>
@@ -62,6 +63,7 @@ const HeroHome2 = () => {
                 </div>
                 <Counter />
             </section>
+            {/* <GalleryV3 isOpen={isGalleryOpen} onClose={closeGallery} /> */}
             <GiftingGallery isOpen={isGalleryOpen} onClose={closeGallery} />
         </>
     )

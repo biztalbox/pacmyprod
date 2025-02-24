@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState, CSSProperties } from 'react';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
 
-const PackagingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) =>  {
+const GalleryV3 = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) =>  {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [isMouseInside, setIsMouseInside] = useState<boolean>(false);
     let camera: THREE.PerspectiveCamera;
@@ -297,4 +297,4 @@ const PackagingGallery = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =>
     );
 }
 
-export default PackagingGallery;
+export default GalleryV3;

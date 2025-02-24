@@ -176,6 +176,7 @@ const GalleryV2: React.FC = () => {
   const handleNext = () => {
     if (!isTransitioning && projects.length > 0) {
       currentProject = (currentProject + 1) % projects.length;
+      console.log(currentProject);
       transitionToProject(currentProject);
     }
   };
