@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import GalleryV3 from './GalleryV3';
 import Counter from './Counter';
 import GiftingGallery from './GiftingGallery';
 
