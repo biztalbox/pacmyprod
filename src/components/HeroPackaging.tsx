@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import PackagingGallery from './PackagingGallery';
 import Counter from './Counter';
+import Link from 'next/link';
 
 
 const HeroHome2 = () => {
@@ -20,7 +21,7 @@ const HeroHome2 = () => {
             <section className="bg-gradient-to-b md:bg-gradient-to-r from-secondary to-foreground relative">
                 <div className="flex w-full responsive_box relative">
                     {/* Left Section: Packaging */}
-                    <a onClick={openGallery} className="md:w-1/2 container py-24 mr-auto text-white md:min-h-screen flex flex-col gap-10 relative group md:packaging 2xl:max-w-[600px] float-start">
+                    <Link href="/gifting/1" className="md:w-1/2 container py-24 mr-auto text-white md:min-h-screen flex flex-col gap-10 relative group md:packaging 2xl:max-w-[600px] float-start">
 
                         <div className="flex flex-col items-center md:items-start">
                             <h1 className="whitespace-nowrap">Kapa Boxes</h1>
@@ -37,10 +38,10 @@ const HeroHome2 = () => {
                             <img src="/collage.png" alt="Packaging" className="rounded order-1 md:order-2 w-96" />
                         </div>
                         <div className="absolute inset-0 bg-overlay opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-                    </a>
+                    </Link>
 
                     {/* Right Section: Gifting */}
-                    <div onClick={openGallery} className="md:w-1/2 border-t-2 md:border-t-0 md:min-h-screen border-white container py-24 text-black flex md:items-end md:mt-auto flex-col gap-10 relative group md:gifting 2xl:max-w-[600px] float-end">
+                    <Link href="/gifting/1" className="md:w-1/2 border-t-2 md:border-t-0 md:min-h-screen border-white container py-24 text-black flex md:items-end md:mt-auto flex-col gap-10 relative group md:gifting 2xl:max-w-[600px] float-end">
                         <div className="flex flex-col gap-10">
                             <div className="flex flex-col md:flex-row items-start gap-5 md:justify-bet">
                                 <img src="/collage.png" alt="Packaging" className="rounded w-96" />
@@ -58,11 +59,11 @@ const HeroHome2 = () => {
 
                         </div>
                         <div className="absolute inset-0 bg-overlay opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-                    </div>
+                    </Link>
                 </div>
                 <Counter />
             </section>
-            <PackagingGallery isOpen={isGalleryOpen} onClose={closeGallery} />
+            {/* <PackagingGallery isOpen={isGalleryOpen} onClose={closeGallery} /> */}
         </>
     )
 }

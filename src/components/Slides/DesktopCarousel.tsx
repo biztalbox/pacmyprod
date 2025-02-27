@@ -1,9 +1,9 @@
 "use client"
 
-const DesktopCarousel = () => {
-  return (
-    <div>DesktopCarousel</div>
-  )
+const DesktopCarousel = ({ currentProject }: { currentProject: number }) => {
+    return (
+        <div>DesktopCarousel</div>
+    )
 }
 
 export default DesktopCarousel

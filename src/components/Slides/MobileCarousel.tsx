@@ -1,124 +1,122 @@
 "use client"
 import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import projectData from '../../data/projectData.json';
+import MobileSlides from './MobileSlides';
 import { gsap } from 'gsap';
-import projectData from '@/app/data/projectData.json'; // Adjust the path as necessary
-import MobileSlides from './MobileSlides'; // Adjust the path as necessary
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const MobileCarousel = () => {
-    const sectionRef = useRef<HTMLDivElement>(null);
-    let camera: THREE.PerspectiveCamera;
-    let scene: THREE.Scene;
-    let renderer: THREE.WebGLRenderer;
-    let projects: THREE.Mesh[] = [];
-    let currentProject: number = 0;
-    let isTransitioning: boolean = false;
+const MobileCarousel = ({ currentProject }: { currentProject: number }) => {
+    const containerRef = useRef<HTMLElement>(null);
+    const slidesRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
-        init();
-        return () => {
-            if (renderer) {
-                renderer.dispose();
-                if (sectionRef.current) {
-                    sectionRef.current.removeChild(renderer.domElement);
-                }
-            }
-            window.removeEventListener('resize', onWindowResize);
-        };
-    }, []);
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
 
-    const init = () => {
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000);
+        if (!containerRef.current) return;
 
-        if (sectionRef.current) {
-            sectionRef.current.appendChild(renderer.domElement);
+        // Scroll to current project
+        const targetSlide = slidesRef.current[currentProject];
+        if (targetSlide) {
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: {
+                    y: targetSlide,
+                    autoKill: false
+                },
+                ease: "power2.inOut"
+            });
         }
 
-        camera.position.z = 35; // Mobile-specific camera position
-        createProjects();
+        // Set up scroll triggers for each slide
+        slidesRef.current.forEach((slide, index) => {
+            if (!slide) return;
 
-        // if (projects.length > 0) {
-        //     transitionToProject(0);
-        // } else {
-        //     console.error("No projects available to display.");
-        // }
+            gsap.fromTo(slide,
+                {
+                    opacity: 0,
+                    y: 50
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: slide,
+                        start: "top center",
+                        end: "bottom center",
+                        toggleActions: "play none none reverse",
+                        markers: false
+                    }
+                }
+            );
+        });
 
-        window.addEventListener('resize', onWindowResize);
-        animate();
-    };
+        // Smooth scroll setup
+        const smoothScroll = () => {
+            let currentScroll = window.pageYOffset;
+            let targetScroll = currentScroll;
+            let ease = 0.075; // Adjust this value to change scroll smoothness
 
-    const createProjects = () => {
-        projectData.forEach((project, index) => {
-            const geometry = new THREE.PlaneGeometry(20, 15);
-            const texture = new THREE.TextureLoader().load(project.mobileImage, () => {
-                renderer.render(scene, camera);
+            const animate = () => {
+                currentScroll = lerp(currentScroll, targetScroll, ease);
+                if (containerRef.current) {
+                    containerRef.current.style.transform = `translateY(${-currentScroll}px)`;
+                }
+                requestAnimationFrame(animate);
+            };
+
+            animate();
+
+            window.addEventListener('scroll', () => {
+                targetScroll = window.pageYOffset;
             });
-            const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0 });
-            const mesh = new THREE.Mesh(geometry, material);
+        };
 
-            // For mobile, position vertically
-            mesh.position.y = index * 25;
+        smoothScroll();
 
-            scene.add(mesh);
-            projects.push(mesh);
-        });
-    };
+        return () => {
+            // Cleanup scroll triggers
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+    }, [currentProject]);
 
-    const transitionToProject = (index: number) => {
-        isTransitioning = true;
-        gsap.to(camera.position, {
-            y: projects[index].position.y,
-            duration: 0.8,
-            ease: "power2.inOut",
-            onComplete: () => {
-                isTransitioning = false;
-            }
-        });
-
-        projects.forEach((project, i) => {
-            gsap.to(project.material, { opacity: (i === index) ? 1 : 0, duration: 0.5 });
-        });
-    };
-
-    const onWindowResize = () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    };
-
-    const animate = () => {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
+    // Linear interpolation helper function
+    const lerp = (start: number, end: number, factor: number) => {
+        return start + (end - start) * factor;
     };
 
     return (
-        <div ref={sectionRef} id="canvas-container"
-            style={{
-                height: '100vh',
-                width: '100vw',
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                overflow: 'hidden',
-                zIndex: 1000
-            }}
+        <section 
+            ref={containerRef}
+            className='fixed top-0 w-full'
+            style={{ willChange: 'transform' }}
         >
             {projectData.map((project, index) => (
-                <MobileSlides
-                    key={index}
-                    image={project.mobileImage}
-                    text={project.title}
-                    index={index}
-                    setIndex={(newIndex) => currentProject = newIndex}
-                />
+                <div 
+                    key={index} 
+                    ref={el => {
+                        if (el) {
+                            slidesRef.current[index] = el;
+                        }
+                    }}
+                    className="h-screen w-full"
+                    style={{ 
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}
+                >
+                    <MobileSlides 
+                        currentProject={index} 
+                        image={project.mobileImage} 
+                        text={project.title} 
+                        description={project.description} 
+                    />
+                </div>
             ))}
-        </div>
+        </section>
     );
-}
+};
 
 export default MobileCarousel;

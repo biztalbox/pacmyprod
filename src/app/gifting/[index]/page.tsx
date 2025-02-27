@@ -1,10 +1,15 @@
 import SlidesContainer from '@/components/slidesContainer'
-import React from 'react'
 
-const page = () => {
+export default async function Page({
+    params,
+}: {
+    params: Promise<{ index: number }>
+}) {
+    const index = (await params).index
     return (
-        <SlidesContainer />
+        <main className='min-h-screen'>
+
+            <SlidesContainer currentProject={index} />
+        </main>
     )
 }
-
-export default page

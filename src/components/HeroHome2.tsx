@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
 import GiftingGallery from './GiftingGallery';
+import Link from 'next/link';
 
 
 const HeroHome2 = () => {
@@ -40,7 +41,7 @@ const HeroHome2 = () => {
                     </a>
 
                     {/* Right Section: Gifting */}
-                    <div onClick={openGallery} className="md:w-1/2 border-t-2 md:border-t-0 md:min-h-screen border-white container py-24 text-black flex md:items-end md:mt-auto flex-col gap-10 relative group gifting 2xl:max-w-[600px] md:float-end">
+                    <Link href="/gifting/1" className="md:w-1/2 border-t-2 md:border-t-0 md:min-h-screen border-white container py-24 text-black flex md:items-end md:mt-auto flex-col gap-10 relative group gifting 2xl:max-w-[600px] md:float-end">
                         <div className="flex flex-col gap-10">
                             <div className="flex flex-col md:flex-row items-start gap-5 md:justify-bet">
                                 <img src="/collage.png" alt="Packaging" className="rounded w-96" />
@@ -58,12 +59,12 @@ const HeroHome2 = () => {
 
                         </div>
                         <div className="absolute inset-0 bg-overlay opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-                    </div>
+                    </Link>
                 </div>
                 <Counter />
             </section>
             {/* <GalleryV3 isOpen={isGalleryOpen} onClose={closeGallery} /> */}
-            <GiftingGallery isOpen={isGalleryOpen} onClose={closeGallery} />
+            {/* <GiftingGallery isOpen={isGalleryOpen} onClose={closeGallery} /> */}
         </>
     )
 }

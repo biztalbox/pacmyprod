@@ -1,46 +1,41 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import MobileCarousel from './Slides/MobileCarousel';
-import DesktopCarousel from './Slides/DesktopCarousel';
-import projectData from '@/app/data/projectData.json'
+import { useRouter } from 'next/navigation';
+import ScrollContainer from './Slides/ScrollContainer';
+import SwiperMobile from './Slides/SwiperMobile';
+import SwiperDesktop from './Slides/SwiperDesktop';
 
 // Define the type for a project
 interface Project {
     title: string;
     desktopImage: string;
     mobileImage: string;
+    description: string;
 }
 
-const Page = () => {
-    const [index, setIndex] = useState<string | null>(null);
-    const [isMobile, setIsMobile] = useState(false);
-    const searchParams = useSearchParams();
+const SlidesContainer = ({ currentProject }: { currentProject: number }) => {
+    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const router = useRouter();
 
     useEffect(() => {
-        setIsMobile(window.innerWidth < 768);
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
 
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    useEffect(() => {
-        setIndex(searchParams.get('index'));
-    }, [searchParams]);
-
     return (
-        <section>
+        <section className='w-full h-full'>
             {isMobile ? (
-                <MobileCarousel />
+                <SwiperMobile currentSlide={currentProject} />
+                // <ScrollContainer currentProject={currentProject} />
             ) : (
-                <DesktopCarousel />
+                <SwiperDesktop currentSlide={currentProject} />
             )}
         </section>
-    )
+    );
 }
 
-export default Page;
+export default SlidesContainer;

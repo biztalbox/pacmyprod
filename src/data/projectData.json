@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Portrait 1",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1553061592-03b4b2df2f66?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A serene portrait capturing the essence of nature."
+    },
+    {
+        "title": "Portrait 2",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1553061599-86c4cfa449d9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A vibrant portrait showcasing the beauty of life."
+    },
+    {
+        "title": "Portrait 3",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1553666102-4fb057e3d5e9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A captivating portrait that tells a story."
+    },
+    {
+        "title": "Portrait 4",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1553666137-26595c140bb7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A stunning portrait that highlights the subject's features."
+    },
+    {
+        "title": "Portrait 5",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1555999005-20c8ca7cc584?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A beautiful portrait that captures the subject's essence."
+    },
+    {
+        "title": "Portrait 6",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1555999019-50fdfd6c7477?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A striking portrait that showcases the subject's personality."
+    },
+    {
+        "title": "Portrait 7",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1542223616-9de9adb5e3e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A captivating portrait that tells a story."
+    },
+    {
+        "title": "Portrait 8",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1551171128-c5b124a4174c?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A stunning portrait that highlights the subject's features."
+    },
+    {
+        "title": "Portrait 9",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1534601222446-9b4e94472525?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A beautiful portrait that captures the subject's essence."
+    },
+    {
+        "title": "Portrait 10",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1542223616-9de9adb5e3e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A striking portrait that showcases the subject's personality."
+    },
+    {
+        "title": "Portrait 11",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1542223616-9de9adb5e3e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A captivating portrait that tells a story."
+    },
+    {
+        "title": "Portrait 12",
+        "desktopImage": "/md_slide.jfif",
+        "mobileImage": "https://images.unsplash.com/photo-1551171128-c5b124a4174c?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "A stunning portrait that highlights the subject's features."
+    }
+]
