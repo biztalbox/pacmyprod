@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Cosmetic Boxes",
+        "desktopImage": "/mono/desktop/cosmetic.webp",
+        "mobileImage": "/mono/mobile/cosmetic.webp",
+        "description": "Elegant, custom packaging for cosmetics precisely based on customer demands."
+    },
+    {
+        "title": "Perfume Boxes",
+        "desktopImage": "/mono/desktop/perfume.webp",
+        "mobileImage": "/mono/mobile/perfume.webp",
+        "description": "Crafted for elegance and protection, our durable mono carton solutions for perfume packaging guarantee both product safety and striking visual appeal."
+    },
+    {
+        "title": "Liquor Boxes",
+        "desktopImage": "/mono/desktop/liquor.webp",
+        "mobileImage": "/mono/mobile/liquor.webp",
+        "description": "Mono cartons are designed for liquor packaging to ensure strength and visual appeal"
+    },
+    {
+        "title": "Lighting",
+        "desktopImage": "/mono/desktop/light.webp",
+        "mobileImage": "/mono/mobile/light.webp",
+        "description": "Secure packaging for lighting products to safeguard delicate components during transportation"
+    },
+    {
+        "title": "Automobile",
+        "desktopImage": "/mono/desktop/automobile.webp",
+        "mobileImage": "/mono/mobile/automobile.webp",
+        "description": "PMP has robust mono packaging for automobile components to offer protection against damage"
+    },
+    {
+        "title": "Food & Beverage",
+        "desktopImage": "/mono/desktop/food.webp",
+        "mobileImage": "/mono/mobile/food.webp",
+        "description": "Food Grade packaging solutions for food and beverage products. Get freshness and quality"
+    },
+    {
+        "title": "Pharmaceutical",
+        "desktopImage": "/mono/desktop/pharmaceutical.webp",
+        "mobileImage": "/mono/mobile/pharmaceutical.webp",
+        "description": " Strong and sustainable packaging for pharmaceutical products."
+    },
+    {
+        "title": "Agriculture",
+        "desktopImage": "/mono/desktop/agriculture.webp",
+        "mobileImage": "/mono/mobile/agriculture.webp",
+        "description": "Cartons especially designed to protect sensitive electronic devices from shock, moisture, and dust."
+    }
+]

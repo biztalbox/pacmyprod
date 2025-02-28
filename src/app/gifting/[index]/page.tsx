@@ -1,4 +1,5 @@
 import SlidesContainer from '@/components/slidesContainer'
+import projectData from '@/data/gifting.json'
 
 export default async function Page({
     params,
@@ -7,9 +8,9 @@ export default async function Page({
 }) {
     const index = (await params).index
     return (
-        <main className='min-h-screen'>
+        <main className='redish_section'>
 
-            <SlidesContainer currentProject={index} />
+            <SlidesContainer currentProject={index} projectData={projectData} />
         </main>
     )
 }

@@ -3,21 +3,22 @@ const About = () => {
     return (
         <main>
             {/* Hero Section */}
-            <section className="text-center py-16 px-6">
+            <section className="text-center py-16 px-6 bg-foreground">
                 <h1 className="text-4xl font-bold text-primary">About Us</h1>
-                <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+                <p className="mt-4 text-black max-w-2xl mx-auto">
                     We are dedicated to delivering top-notch solutions with a passion for technology and innovation.
                 </p>
             </section>
 
             {/* Who we are */}
-            <section className='py-16 text-foreground bg-gray-900'>
+            <section className='py-16 text-foreground bg-secondary'>
 
                 <div className="container flex flex-col md:flex-row md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
                     <img src="/who_are_we.webp" alt="About Image" className='w-fit rounded-lg' />
                     <div className="flex flex-col gap-8">
-                        <h2>Our Vision Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque possimus, officiis expedita asperiores at est molestiae sit harum corporis, repudiandae tempora natus! Tempore sit impedit qui aspernatur, laboriosam nulla!</p>
+                        <h2>Expertly crafted, professionally presented</h2>
+                        <p>We offer high-quality gifting and packaging solutions for every occasion. With over 15 years of experience and a team of highly skilled individuals, we treasure and preserve the traditional essence of gifting and packaging.</p>
+                        <p>It is a certainty that every kit delivered by PMP has an extra personal touch that shows our top-notch skills along with the intention of our clients to make an everlasting impression on the receiver. Additionally, one of our key expertise is that we never compromise our quality.</p>
                     </div>
                 </div>
             </section>
@@ -27,22 +28,28 @@ const About = () => {
                 <div className="container flex flex-col md:flex-row md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
 
                     <div className="flex flex-col gap-8">
-                        <h2>Our Mission Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque possimus, officiis expedita asperiores at est molestiae sit harum corporis, repudiandae tempora natus! Tempore sit impedit qui aspernatur, laboriosam nulla!</p>
+                        <h2>Why Choose Us?</h2>
+                        <p>At Pac My Product, we recognize the significance of gifting and the art of packaging presentation. This fundamental principle drives our commitment to crafting exceptional gifting kits and packaging that elevate your brand's identity and create lasting, unforgettable experience.</p>
                     </div>
                     <img src="/why_choose_us.webp" alt="About Image" className='w-fit md:w-1/2 rounded-lg' />
                 </div>
             </section>
 
             {/* Our Mission */}
-            <section className='py-16 text-foreground bg-gray-900'>
+            <section className='py-16 text-foreground bg-secondary'>
 
                 <div className="container flex flex-col md:flex-row md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
                     <img src="/vision_mission.webp" alt="About Image" className='w-fit rounded-lg' />
                     <div className="flex flex-col gap-8">
-                        <h2>Our Vision Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque possimus, officiis expedita asperiores at est molestiae sit harum corporis, repudiandae tempora natus! Tempore sit impedit qui aspernatur, laboriosam nulla!</p>
+                        <div className="flex flex-col gap-4">
+
+                            <h2>Our Mission & Vision</h2>
+                            <p>We strive to provide innovative gifting kits and high-quality packaging solutions that meet customer needs. While catering to it, we prioritize sustainability and delivering exceptional service. Our core aim is not just to be your trusted partner but also to be an inseparable extended team. </p>
+                            <p>We aim to be the only choice in the gifting and packaging industry.</p>
+                        </div>
+
                     </div>
+
                 </div>
             </section>
 

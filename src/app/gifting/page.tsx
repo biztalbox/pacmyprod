@@ -6,7 +6,6 @@ const page = () => {
     redirect('/gifting/1')
     return (
         <main>
-            {/* <Gifting /> */}
         </main>
     )
 }

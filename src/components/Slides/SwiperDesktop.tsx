@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -5,7 +6,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow'
 import SwiperCore from 'swiper'
 import { EffectCoverflow, Pagination, Keyboard } from 'swiper/modules';
-import projectData from '../../data/projectData.json'
 import { useRouter } from 'next/navigation';
 
 // Define a type for the project data
@@ -19,9 +19,12 @@ interface Project {
 // Initialize Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination, Keyboard])
 
-const SwiperDesktop: React.FC<{ currentSlide: number }> = ({ currentSlide }) => {
+const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> = ({ currentSlide, projectData }) => {
     const router = useRouter();
     const projects: Project[] = projectData as Project[]
+
+    let lastMousePosition = { x: 0, y: 0 };
+    const movementThreshold = 5; // Minimum movement in pixels to trigger the effect
 
     const handleSlideChange = (swiper: any) => {
         const currentIndex = swiper.activeIndex;
@@ -29,13 +32,25 @@ const SwiperDesktop: React.FC<{ currentSlide: number }> = ({ currentSlide }) => 
     };
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, slide: HTMLDivElement) => {
-        const { clientY, currentTarget } = e;
-        const { top, height } = currentTarget.getBoundingClientRect();
-        const offsetY = clientY - top;
-        const xRotation = ((offsetY - height / 2) / height) * 20; // Adjust the multiplier for more/less tilt
-        const yRotation = 0; // No horizontal tilt
+        const { clientX, clientY, currentTarget } = e;
 
-        slide.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        // Calculate the distance moved
+        const deltaX = clientX - lastMousePosition.x;
+        const deltaY = clientY - lastMousePosition.y;
+        const distanceMoved = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        // Check if the mouse has moved more than the threshold
+        if (distanceMoved > movementThreshold) {
+            const { top, height } = currentTarget.getBoundingClientRect();
+            const offsetY = clientY - top;
+            const xRotation = ((offsetY - height / 2) / height) * 20; // Adjust the multiplier for more/less tilt
+            const yRotation = 0; // No horizontal tilt
+
+            slide.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+
+            // Update the last mouse position
+            lastMousePosition = { x: clientX, y: clientY };
+        }
     };
 
     const handleMouseLeave = (slide: HTMLDivElement) => {
@@ -54,39 +69,32 @@ const SwiperDesktop: React.FC<{ currentSlide: number }> = ({ currentSlide }) => 
                 rotate: 40,
                 stretch: 0,
                 depth: 800,
-                modifier: 2,
-                slideShadows: true,
+                modifier: 3,
+                slideShadows: false,
             }}// Adjust for desktop
-            onSlideChange={handleSlideChange}
+            onSlideChangeTransitionEnd={handleSlideChange}
             pagination={{ clickable: true }}
-            speed={1000}
+            speed={600}
             initialSlide={currentSlide <= projects.length ? currentSlide - 1 : 1}
             keyboard={{ enabled: true }}
-            className='h-[100vh] w-[100vw] flex items-center justify-center'
+            className='h-[80vh] xl:h-screen w-[100vw] flex items-center justify-center'
         >
             {projects.map((project, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className='!flex items-center justify-center'>
                     <div
                         style={{
                             backgroundImage: `url(${project.desktopImage})`, // Use desktopImage
                             backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            color: 'white',
-                            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
+                            backgroundPosition: 'center'
                         }}
-                        className='desktop_slide_3d w-[85%] md:h-[50vh] lg:h-[100vh] slide-tilt mx-auto self-center flex items-center justify-center'
+                        className='desktop_slide_3d md:w-[90%] xl:w-[85%] md:h-[38vh] xl:h-[85vh] my-auto slide-tilt mx-auto self-center flex items-center justify-center'
                         onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
                         onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
                     >
-                        <div className='flex flex-nowrap gap-5 items-end px-5 py-20 w-full h-full'>
-                            <div className="content flex flex-grow flex-col gap-3 w-fit">
-                                <h2 className='text-5xl'>{project.title}</h2>
-                                <p className='text-lg'>{project.description}</p>
-                            </div>
-                            <div className="flex flex-col gap-2 text-white text-base items-center w-fit">
-                                <div className="current">{index + 1}</div>
-                                <span className='border-b-2 border-white w-2'></span>
-                                <div className="total">{projects.length}</div>
+                        <div className='flex flex-nowrap gap-5 justify-end items-center py-5 md:px-5 xl:px-20 w-full h-full'>
+                            <div className="content flex flex-col gap-5 text-end md:w-72 xl:w-96 ml-auto text-black">
+                                <h2 className='md:text-3xl xl:text-5xl text-stroke-2 text-stroke-black text-red-600'>{project.title}</h2>
+                                <p className='md:text-base xl:text-lg text-stroke-1 text-stroke-gray-200'>{project.description}</p>
                             </div>
                         </div>
                     </div>
@@ -97,12 +105,3 @@ const SwiperDesktop: React.FC<{ currentSlide: number }> = ({ currentSlide }) => 
 }
 
 export default SwiperDesktop
-
-const style = `
-    .slide-tilt {
-        transition: transform 0.3s;
-    }
-    .slide-tilt:hover {
-        transform: perspective(1000px) rotateY(10deg) rotateX(10deg);
-    }
-`

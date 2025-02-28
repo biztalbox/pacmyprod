@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Corporate Gifting",
+        "desktopImage": "/gifting/desktop/corporate.webp",
+        "mobileImage": "/gifting/mobile/corporate.webp",
+        "description": "Thoughtfully curated corporate gifting solutions that help build professional relationships and create lasting memories."
+    },
+    {
+        "title": "Joining Kit",
+        "desktopImage": "/gifting/desktop/joining_kit.webp",
+        "mobileImage": "/gifting/mobile/joining.webp",
+        "description": "Customised welcome kit for new team members. The kit features branded merchandise, essential tools, and resources to make them feel valued and ready for their role"
+    },
+    {
+        "title": "Festive Gifting",
+        "desktopImage": "/gifting/desktop/festival.webp",
+        "mobileImage": "/gifting/mobile/festival.webp",
+        "description": "Festive kits that reflect the holiday spirit and special occasions. A perfect present that brings joy to the recipient"
+    },
+    {
+        "title": "Self-Care and Wellness Kits",
+        "desktopImage": "/gifting/desktop/self_care.webp",
+        "mobileImage": "/gifting/mobile/selfcare.webp",
+        "description": "Kits focused on relaxing and health related products such as candles, skincare, and aromatherapy, promoting personal well-being and stress relief"
+    },
+    {
+        "title": "Subscription Gifts",
+        "desktopImage": "/gifting/desktop/subscription.webp",
+        "mobileImage": "/gifting/mobile/subscription.webp",
+        "description": "Filled with love and gratitude, these subscription kits offer products including books, snacks, wellness, and beauty products"
+    },
+    {
+        "title": "Milestone Celebration",
+        "desktopImage": "/gifting/desktop/milestone.webp",
+        "mobileImage": "/gifting/mobile/milestone.webp",
+        "description": "Gifts to celebrate promotions, anniversaries, personal accomplishments, hard work and success of the individual"
+    },
+    {
+        "title": "Home and kitchen kit",
+        "desktopImage": "/gifting/desktop/home_kitchen.webp",
+        "mobileImage": "/gifting/mobile/home_kitchen.webp",
+        "description": "Useful and attractive gift both cooking experiences offering ease and purpose in one package"
+    },
+    {
+        "title": "Artisan and Handmade Gifts",
+        "desktopImage": "/gifting/desktop/handmade.webp",
+        "mobileImage": "/gifting/mobile/handmade.webp",
+        "description": "Crafted with love and a lot of attention, these handmade gifts add a personal element and narrate a story that involves everyone who values special unique items"
+    },
+    {
+        "title": "Travel Essentials",
+        "desktopImage": "/gifting/desktop/travel.webp",
+        "mobileImage": "/gifting/mobile/travel.webp",
+        "description": "Curated selection of all the goodies that are essential for your long and short-term travel"
+    },
+    {
+        "title": "Eco-Friendly Gifts",
+        "desktopImage": "/gifting/desktop/eco_friendly.webp",
+        "mobileImage": "/gifting/mobile/eco_friendly.webp",
+        "description": "Grab eco-friendly gifting kits for more sustainability"
+    },
+    {
+        "title": "Memory Boxes",
+        "desktopImage": "/gifting/desktop/memory.webp",
+        "mobileImage": "/gifting/mobile/memory.webp",
+        "description": "We ensure that our memory box amplifies your good old memories"
+    },
+    {
+        "title": "Events",
+        "desktopImage": "/gifting/desktop/events.webp",
+        "mobileImage": "/gifting/mobile/events.webp",
+        "description": "From weddings to birthdays, these event-centered gifts add a special touch to any party making it stick in everyone's mind"
+    }
+]

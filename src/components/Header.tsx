@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { FiMenu } from 'react-icons/fi';
 import { IoMdClose } from 'react-icons/io';
@@ -12,28 +13,30 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-gradient-to-b from-background to-transparent text-white py-4 opacity-70 fixed w-full z-50">
+            <header className="bg-gradient-to-b from-background to-transparent text-white py-4 fixed w-full z-50">
                 <div className="container flex justify-between items-center">
-                    <div className="text-white font-bold text-lg">
+                    <Link href='/' className="text-white font-bold text-lg">
                         <img src="/logo.png" alt="PMP" className="h-14" />
-                    </div>
+                    </Link>
                     {!isOpen ?
                         (
-                            <FiMenu className='md:hidden text-white text-2xl' onClick={toggleMenu} />
+                            <FiMenu className='text-white text-2xl cursor-pointer' onClick={toggleMenu} />
                         ) : (
-                            <IoMdClose className='md:hidden text-white text-2xl' onClick={toggleMenu} />
+                            <IoMdClose className='text-white text-2xl cursor-pointer' onClick={toggleMenu} />
                         )}
-                    <div className="hidden md:flex flex-nowrap gap-4">
-                        <a href="/" className="">Home</a>
-                        <a href="/about" className="">About</a>
-                        <a href="/contact" className="">Contact</a>
-                    </div>
+                    {/* <div className="hidden md:flex flex-nowrap gap-4">
+                        <Link href="/" className="">Home</Link>
+                        <Link href="/about" className="">About</Link>
+                        <Link href="/contact" className="">Contact</Link>
+                    </div> */}
                 </div>
                 {isOpen && (
-                    <nav className="flex flex-col divide-y divide-gray-700 text-white">
-                        <a href="/" className="text-white hover:bg-overlay py-4 px-5">Home</a>
-                        <a href="/about" className="text-white hover:bg-overlay py-4 px-5">About</a>
-                        <a href="/contact" className="text-white hover:bg-overlay py-4 px-5">Contact</a>
+                    <nav className="flex flex-col divide-y divide-devider text-white container bg-gradient-to-b from-background to-transparent">
+                        <Link href="/" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Home</Link>
+                        <Link href="/about" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>About</Link>
+                        <Link href="/packaging" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Packaging</Link>
+                        <Link href="/gifting" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Gifting</Link>
+                        <Link href="/contact" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Contact</Link>
                     </nav>
                 )}
             </header>

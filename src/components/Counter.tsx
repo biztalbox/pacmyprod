@@ -27,7 +27,7 @@ const Counter = () => {
   }, []);
 
   return (
-    <section className='bg-gradient-to-t from-background to-transparent text-primary py-4 z-50 relative md:absolute bottom-0 w-full'>
+    <section className='bg-gradient-to-t from-background to-transparent text-primary py-4 z-50 relative 2xl:absolute bottom-0 w-full'>
       <div className="container grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-around">
         <div className="flex flex-col gap-1 items-center text-center">
           <span className='text-4xl font-bold'>{clientsServed}+</span>

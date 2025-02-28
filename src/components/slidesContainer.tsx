@@ -1,22 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import MobileCarousel from './Slides/MobileCarousel';
-import { useRouter } from 'next/navigation';
-import ScrollContainer from './Slides/ScrollContainer';
 import SwiperMobile from './Slides/SwiperMobile';
 import SwiperDesktop from './Slides/SwiperDesktop';
+import Project from '@/types/projects';
 
-// Define the type for a project
-interface Project {
-    title: string;
-    desktopImage: string;
-    mobileImage: string;
-    description: string;
-}
-
-const SlidesContainer = ({ currentProject }: { currentProject: number }) => {
+const SlidesContainer = ({ currentProject, projectData }: { currentProject: number, projectData: Project[] }) => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
-    const router = useRouter();
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -27,12 +16,11 @@ const SlidesContainer = ({ currentProject }: { currentProject: number }) => {
     }, []);
 
     return (
-        <section className='w-full h-full'>
+        <section className='w-full !overflow-hidden'>
             {isMobile ? (
-                <SwiperMobile currentSlide={currentProject} />
-                // <ScrollContainer currentProject={currentProject} />
+                <SwiperMobile currentSlide={currentProject} projectData={projectData} />
             ) : (
-                <SwiperDesktop currentSlide={currentProject} />
+                <SwiperDesktop currentSlide={currentProject} projectData={projectData} />
             )}
         </section>
     );
