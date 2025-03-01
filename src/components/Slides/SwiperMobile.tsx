@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow'
 import SwiperCore from 'swiper'
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Project from '@/types/projects';
 
 
@@ -15,12 +15,14 @@ SwiperCore.use([EffectCoverflow, Pagination])
 
 const SwiperMobile: React.FC<{ currentSlide: number, projectData: Project[] }> = ({ currentSlide, projectData }) => {
     const router = useRouter();
+    const pathname = usePathname()
     // Ensure projectData is typed correctly
     const projects: Project[] = projectData as Project[]
 
     const handleSlideChange = (swiper: any) => {
         const currentIndex = swiper.activeIndex;
-        router.replace(`/gifting/${currentIndex + 1}`);
+        const pageName = pathname.split('/')[1];
+        router.replace(`/${pageName}/${currentIndex + 1}`);
     };
 
     // Add device orientation event listener

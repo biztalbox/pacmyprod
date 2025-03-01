@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const Counter = () => {
   const [clientsServed, setClientsServed] = useState(0);
   const [totalExperience, setTotalExperience] = useState(0);
-  const [productsPacked, setProductsPacked] = useState(0);
+  const [teamSize, setTeamSize] = useState(0);
   const [projectsCompleted, setProjectsCompleted] = useState(0);
 
   const countTo = (setter: React.Dispatch<React.SetStateAction<number>>, target: number) => {
@@ -20,10 +20,10 @@ const Counter = () => {
   };
 
   useEffect(() => {
-    countTo(setClientsServed, 90);
-    countTo(setTotalExperience, 70);
-    countTo(setProductsPacked, 80);
-    countTo(setProjectsCompleted, 90);
+    countTo(setClientsServed, 150);
+    countTo(setTotalExperience, 10);
+    countTo(setTeamSize, 50);
+    countTo(setProjectsCompleted, 500);
   }, []);
 
   return (
@@ -35,11 +35,11 @@ const Counter = () => {
         </div>
         <div className="flex flex-col gap-1 items-center text-center">
           <span className='text-4xl font-bold'>{totalExperience}+</span>
-          <h5 className='text-base md:text-lg'>Total Experience</h5>
+          <h5 className='text-base md:text-lg'>Years of Experience</h5>
         </div>
         <div className="flex flex-col gap-1 items-center text-center">
-          <span className='text-4xl font-bold'>{productsPacked}+</span>
-          <h5 className='text-base md:text-lg'>Products Packed</h5>
+          <span className='text-4xl font-bold'>{teamSize}+</span>
+          <h5 className='text-base md:text-lg'>Team Size</h5>
         </div>
         <div className="flex flex-col gap-1 items-center text-center">
           <span className='text-4xl font-bold'>{projectsCompleted}+</span>

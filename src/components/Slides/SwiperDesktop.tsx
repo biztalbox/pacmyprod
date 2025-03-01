@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow'
 import SwiperCore from 'swiper'
 import { EffectCoverflow, Pagination, Keyboard } from 'swiper/modules';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 // Define a type for the project data
 interface Project {
@@ -22,13 +22,15 @@ SwiperCore.use([EffectCoverflow, Pagination, Keyboard])
 const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> = ({ currentSlide, projectData }) => {
     const router = useRouter();
     const projects: Project[] = projectData as Project[]
+    const pathname = usePathname()
 
     let lastMousePosition = { x: 0, y: 0 };
     const movementThreshold = 5; // Minimum movement in pixels to trigger the effect
 
     const handleSlideChange = (swiper: any) => {
         const currentIndex = swiper.activeIndex;
-        router.replace(`/gifting/${currentIndex + 1}`);
+        const pageName = pathname.split('/')[1];
+        router.replace(`/${pageName}/${currentIndex + 1}`);
     };
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, slide: HTMLDivElement) => {
@@ -77,21 +79,22 @@ const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> 
             speed={600}
             initialSlide={currentSlide <= projects.length ? currentSlide - 1 : 1}
             keyboard={{ enabled: true }}
-            className='h-[80vh] xl:h-screen w-[100vw] flex items-center justify-center'
+            className='h-[80vh] xl:min-h-screen lg:h-[100vh] !w-[100%] flex items-center justify-center'
         >
             {projects.map((project, index) => (
                 <SwiperSlide key={index} className='!flex items-center justify-center'>
                     <div
                         style={{
                             backgroundImage: `url(${project.desktopImage})`, // Use desktopImage
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center'
+                            backgroundSize: 'contain',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
                         }}
-                        className='desktop_slide_3d md:w-[90%] xl:w-[85%] md:h-[38vh] xl:h-[85vh] my-auto slide-tilt mx-auto self-center flex items-center justify-center'
+                        className='desktop_slide_3d md:w-[90%] xl:w-[70%] md:h-[38vh] lg:w-[68%] lg:h-[80vh] xl:h-[90vh] my-auto slide-tilt mx-auto self-center flex items-center justify-center'
                         onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
                         onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
                     >
-                        <div className='flex flex-nowrap gap-5 justify-end items-center py-5 md:px-5 xl:px-20 w-full h-full'>
+                        <div className='flex flex-nowrap gap-5 justify-end items-center py-5 md:px-5 xl:pr-10 w-full h-full'>
                             <div className="content flex flex-col gap-5 text-end md:w-72 xl:w-96 ml-auto text-black">
                                 <h2 className='md:text-3xl xl:text-5xl text-stroke-2 text-stroke-black text-red-600'>{project.title}</h2>
                                 <p className='md:text-base xl:text-lg text-stroke-1 text-stroke-gray-200'>{project.description}</p>

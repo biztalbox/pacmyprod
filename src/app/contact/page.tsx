@@ -1,14 +1,58 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
+import { toast, Toaster } from 'react-hot-toast';
 
 const ContactPage = () => {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        alert('Form submitted');
-        (e.target as HTMLFormElement).reset();
+
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        try {
+            setIsLoading(true);
+            e.preventDefault();
+
+            const form = e.target as HTMLFormElement;
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name')?.toString().trim(),
+                email: formData.get('email')?.toString().trim(),
+                number: formData.get('number')?.toString().trim(),
+                message: formData.get('message')?.toString().trim(),
+            };
+
+            if (!data.name) throw new Error('Name is required');
+            if (!data.number) throw new Error('Phone number is required');
+            if (!data.message) throw new Error('Message is required');
+
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                const res = await response.json();
+                if (!res.success) throw new Error(res.message);
+            }
+
+            toast.success('Thankyou, your message has been sent.');
+            form.reset();
+        } catch (error: any) {
+            toast.error(error.message);
+        } finally {
+            setIsLoading(false);
+        }
     }
     return (
         <main className='redish_section'>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+
+
+            />
             <section className="text-center py-16 px-6 text-foreground">
                 <div className="container flex flex-col gap-8 text-center">
                     <h1 className="text-4xl font-bold">Contact Us</h1>
@@ -22,21 +66,25 @@ const ContactPage = () => {
                     <img src="/contact.avif" alt="Contact Image" className='w-full md:w-1/2 rounded-lg' />
                     <div className="flex flex-col gap-8 w-full md:w-1/2">
                         <h3 className='font-bold'>Get in Touch with Us</h3>
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-foreground">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-foreground text-start">
                             <div className="flex flex-col gap-2">
                                 <label htmlFor="name">Name:</label>
                                 <input type="text" id="name" name="name" required className="p-2 border rounded text-background" />
                             </div>
                             <div className="flex flex-col gap-2">
                                 <label htmlFor="email">Email:</label>
-                                <input type="email" id="email" name="email" required className="p-2 border rounded text-background" />
+                                <input type="email" id="email" name="email" className="p-2 border rounded text-background" />
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <label htmlFor="number">Phone:</label>
+                                <input type="tel" id="number" name="number" className="p-2 border rounded text-background" />
                             </div>
                             <div className="flex flex-col gap-2">
                                 <label htmlFor="message">Message:</label>
                                 <textarea id="message" name="message" required className="p-2 border rounded text-background"></textarea>
                             </div>
-                            <button type="submit" className="px-6 py-2 bg-primary text-white font-bold rounded hover:bg-accent transition w-fit m-auto md:m-0">
-                                Submit
+                            <button disabled={isLoading} type="submit" className="px-6 py-2 bg-primary text-white font-bold rounded hover:bg-accent transition w-fit m-auto md:m-0">
+                                {isLoading ? 'Sending...' : 'Submit'}
                             </button>
                         </form>
                     </div>
