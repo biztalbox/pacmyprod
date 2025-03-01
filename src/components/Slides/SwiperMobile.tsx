@@ -76,7 +76,7 @@ const SwiperMobile: React.FC<{ currentSlide: number, projectData: Project[] }> =
                             }}
                             className='mobile_slide_3d w-full h-full'
                         >
-                            <div className='flex flex-nowrap gap-5 items-end px-5 pb-32 w-full h-full'>
+                            <div className='flex flex-nowrap gap-5 items-end px-5 pb-20 w-full h-full'>
                                 <div className="content flex flex-grow flex-col gap-3 w-fit">
                                     <h2 className='text-4xl text-primary'>{project.title}</h2>
                                     <p className='text-base text-background'>{project.description}</p>
