@@ -27,7 +27,7 @@ const HeroHome2 = () => {
                 {/* Right Section: Gifting */}
                 <Link href="/mono/1" className="md:w-1/2 py-24 md:py-14 2xl:py-24 border-t-[1px] md:border-t-0 xl:min-h-screen border-devider text-foreground flex md:mt-auto flex-col gap-10 relative group gifting">
                     <div className="flex flex-col-reverse md:flex-col gap-10 lg:gap-10 2xl:gap-20 md:!mt-[221px] lg:!mt-[77px] lg:!ml-[23px] xl:!ml-0 2xl:!mt-0">
-                        <div className="flex flex-col-reverse md:flex-col lg:flex-row items-start md:items-end gap-5 md:justify-between">
+                        <div className="flex flex-col-reverse md:flex-col lg:flex-row items-center md:items-end gap-5 md:justify-between">
                             <img src="/hero_packaging/mono2.webp" alt="Packaging" className="rounded w-96 2xl:w-[550px] mainHeroImg" />
                             <div className="text-lg text-center md:text-end flex flex-col gap-8 lg:gap-10 2xl:gap-20">
                                 <button className='w-fit self-center md:self-end bg-primary text-white px-4 py-2 rounded-md'>View Gallery</button>

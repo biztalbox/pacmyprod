@@ -17,7 +17,7 @@ const HeroHome2 = () => {
 
                             <div className="text-lg text-center md:text-start flex flex-col gap-8 lg:gap-10 2xl:gap-20">
                                 <p>From Box to Brand: Packaging That Speaks Volumes.</p>
-                                <button className='w-fit self-center md:self-start bg-primary text-white px-4 py-2 rounded-md'>View Gallery</button>
+                                <button className='w-fit self-center md:self-start bg-primary text-white px-4 py-2 rounded-md'>View More</button>
 
                             </div>
                             <img src="/main_hero/packing4.webp" alt="Packaging" className="rounded order-1 md:order-2 w-96 2xl:w-[550px] 2xl:mt-[-60px]" />
