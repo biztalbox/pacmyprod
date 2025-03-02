@@ -1,39 +1,38 @@
 [
     {
         "title": "Cosmetic Boxes",
-        "desktopImage": "/kappa/desktop/cosmetic.webp",
-        "mobileImage": "/kappa/mobile/cosmetic.webp",
+        "desktopImage": "/Kappa/desktop/cosmetic.webp",
+        "mobileImage": "/Kappa/mobile/cosmetic.webp",
         "description": "PMP Kappa boxes offer stylish packaging that protects cosmetics and enhances the shelf appeal."
     },
-    
     {
         "title": "Perfume Boxes",
-        "desktopImage": "/kappa/desktop/perfume.webp",
-        "mobileImage": "/kappa/mobile/perfume.webp",
+        "desktopImage": "/Kappa/desktop/perfume.webp",
+        "mobileImage": "/Kappa/mobile/perfume.webp",
         "description": "Perfume packaging is designed to provide secure, elegant protection, while adding a luxurious unboxing experience."
     },
     {
         "title": "Liquor Boxes",
-        "desktopImage": "/kappa/desktop/liquor.webp",
-        "mobileImage": "/kappa/mobile/liquor.webp",
+        "desktopImage": "/Kappa/desktop/liquor.webp",
+        "mobileImage": "/Kappa/mobile/liquor.webp",
         "description": "Pac My Product offers sturdy packaging that ensures the protection of liquor bottles during transportation. These boxes prevent breakage while offering a sophisticated design for a premium feel."
     },
     {
         "title": "Electronic",
-        "desktopImage": "/kappa/desktop/electronic.webp",
-        "mobileImage": "/kappa/mobile/electronic.webp",
+        "desktopImage": "/Kappa/desktop/electronic.webp",
+        "mobileImage": "/Kappa/mobile/electronic.webp",
         "description": "Designed with durability in mind, packaging for electronics ensures that delicate devices are well-protected from damage, moisture, and dust while providing a functional exterior."
     },
     {
         "title": "Automobile",
-        "desktopImage": "/kappa/desktop/automobile.webp",
-        "mobileImage": "/kappa/mobile/automobile.webp",
+        "desktopImage": "/Kappa/desktop/automobile.webp",
+        "mobileImage": "/Kappa/mobile/automobile.webp",
         "description": "Kappa packaging for automobiles protects the integrity of the product."
     },
     {
         "title": "Gifting",
-        "desktopImage": "/kappa/desktop/gifting.webp",
-        "mobileImage": "/kappa/mobile/gifting.webp",
+        "desktopImage": "/Kappa/desktop/gifting.webp",
+        "mobileImage": "/Kappa/mobile/gifting.webp",
         "description": "Gifting packages are crafted to offer a high-quality presentation to make every gift extra special."
     }
 ]
