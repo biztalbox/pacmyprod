@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow'
 import SwiperCore from 'swiper'
 import { EffectCoverflow, Pagination, Keyboard } from 'swiper/modules';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 // Define a type for the project data
 interface Project {
@@ -20,7 +20,7 @@ interface Project {
 SwiperCore.use([EffectCoverflow, Pagination, Keyboard])
 
 const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> = ({ currentSlide, projectData }) => {
-    const router = useRouter();
+    // const router = useRouter();
     const projects: Project[] = projectData as Project[]
     const pathname = usePathname()
 
@@ -30,7 +30,7 @@ const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> 
     const handleSlideChange = (swiper: any) => {
         const currentIndex = swiper.activeIndex;
         const pageName = pathname.split('/')[1];
-        router.replace(`/${pageName}/${currentIndex + 1}`);
+        window.history.pushState(null, '', `/${pageName}/${currentIndex + 1}`);
     };
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, slide: HTMLDivElement) => {
