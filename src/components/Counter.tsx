@@ -21,7 +21,7 @@ const Counter = () => {
 
   useEffect(() => {
     countTo(setClientsServed, 150);
-    countTo(setTotalExperience, 10);
+    countTo(setTotalExperience, 5);
     countTo(setTeamSize, 50);
     countTo(setProjectsCompleted, 500);
   }, []);
