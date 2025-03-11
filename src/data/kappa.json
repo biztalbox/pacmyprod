@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Cosmetic Boxes",
+        "desktopImage": "/Kappa/desktop/cosmetic.webp",
+        "mobileImage": "/Kappa/mobile/cosmetic.webp",
+        "description": "Aesthetic cosmetic boxes packaging that ensures your brand gets noticed at first glance. Our kappa board boxes enhance the shelf appeal of cosmetic products and provide an exceptional unboxing experience."
+    },
+    {
+        "title": "Perfume Boxes",
+        "desktopImage": "/Kappa/desktop/perfume.webp",
+        "mobileImage": "/Kappa/mobile/perfume.webp",
+        "description": "A customer’s first impression of a perfume happens through sight, making the packaging materials a crucial part of a brand’s image. Our perfume boxes are attention-grabbing and offer a luxurious unboxing experience."
+    },
+    {
+        "title": "Liquor Bottle Packaging",
+        "desktopImage": "/Kappa/desktop/liquor.webp",
+        "mobileImage": "/Kappa/mobile/liquor.webp",
+        "description": "We offer sturdy packaging to prevent breakage during the transportation of premium liquor bottles. This packaging box is designed with remarkable craftsmanship and innovative packaging design ideas."
+    },
+    {
+        "title": "Electronic Packaging",
+        "desktopImage": "/Kappa/desktop/electronic.webp",
+        "mobileImage": "/Kappa/mobile/electronic.webp",
+        "description": "This packaging ensures that delicate electronic devices are well-protected from any mechanical damage through moisture or dust. It is designed for functionality by leveraging advanced materials and exquisite packaging printing to boost brand appeal. "
+    },
+    {
+        "title": "Automotive Packaging",
+        "desktopImage": "/Kappa/desktop/automobile.webp",
+        "mobileImage": "/Kappa/mobile/automobile.webp",
+        "description": "These kappa board boxes are exclusively designed to prevent automobile accessories and components from damage. It comes in various shapes and sizes, ensuring that automotive parts are shipped and sold safely."
+    },
+    {
+        "title": "Gifting",
+        "desktopImage": "/Kappa/desktop/gifting.webp",
+        "mobileImage": "/Kappa/mobile/gifting.webp",
+        "description": "The Packaging gift box makes the mundane act of gifting thrilling. Our high-quality Kappa board boxes are customized with packaging design templates. It contains premium quality products that are presented attractively to offer a personalized unboxing experience."
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Corporate Gifting",
+        "desktopImage": "/gifting/desktop/corporate.webp",
+        "mobileImage": "/gifting/mobile/corporate.webp",
+        "description": "This corporate gifting box is compiled to foster genuine connections with your team. It includes branded merchandise and necessary items with outstanding quality, establishing us as the leading corporate gift manufacturers in Delhi.  "
+    },
+    {
+        "title": "Joining Kit",
+        "desktopImage": "/gifting/desktop/joining_kit.webp",
+        "mobileImage": "/gifting/mobile/joining.webp",
+        "description": "Joining kits are thoughtfully put together to welcome new team members and create a memorable first impression on them. While it may not singlehandedly soothe an employee’s first day nerves, it definitely makes them feel valued and appreciated."
+    },
+    {
+        "title": "Festival Hampers",
+        "desktopImage": "/gifting/desktop/festival.webp",
+        "mobileImage": "/gifting/mobile/festival.webp",
+        "description": "Premium festival gift bags to reflect the spirit and warmth of special occasions. Our personalized festive gift box is crafted with meticulous detail that makes recipients feel loved and cared for."
+    },
+    {
+        "title": "Self-Care and Wellness Kits",
+        "desktopImage": "/gifting/desktop/self_care.webp",
+        "mobileImage": "/gifting/mobile/selfcare.webp",
+        "description": "Kits designed to pamper your precious ones to relax and de-stress. It includes skincare, refreshing candles, and other aromatherapy products to offer a rejuvenating experience"
+    },
+    {
+        "title": "Subscription Boxes",
+        "desktopImage": "/gifting/desktop/subscription.webp",
+        "mobileImage": "/gifting/mobile/subscription.webp",
+        "description": "Subscription boxes come with a bunch of wellness products like books, snacks, and cosmetics. This maintains a continuous gift-giving ritual that saves the guesswork while ensuring your dear ones receive a token of your love every month."
+    },
+    {
+        "title": "Milestone Celebration",
+        "desktopImage": "/gifting/desktop/milestone.webp",
+        "mobileImage": "/gifting/mobile/milestone.webp",
+        "description": "Custom gift hampers are designed to celebrate promotions, anniversaries, and personal accomplishments of your loved ones. Our milestone celebration package is the most thoughtful gesture to make receivers feel genuinely appreciated."
+    },
+    {
+        "title": "Home and kitchen kit",
+        "desktopImage": "/gifting/desktop/home_kitchen.webp",
+        "mobileImage": "/gifting/mobile/home_kitchen.webp",
+        "description": "A gift box with resourceful and aesthetically pleasing Kitchenware. This kits offer both convenience and style, filling the recipient’s home with warmth and excitement."
+    },
+    {
+        "title": "Artisan and Handmade Gifts",
+        "desktopImage": "/gifting/desktop/handmade.webp",
+        "mobileImage": "/gifting/mobile/handmade.webp",
+        "description": "Our handmade gift hamper is perfect for people who aren't impressed by conventional gifts. It celebrates craftsmanship and shows genuine effort that is not always possible with mass-produced items"
+    },
+    {
+        "title": "Travel Essentials",
+        "desktopImage": "/gifting/desktop/travel.webp",
+        "mobileImage": "/gifting/mobile/travel.webp",
+        "description": "Customized gift hampers with travel related gifts for wanderers and explorers to commemorate both long and short-term trips. It includes a selection of functional items, all bundled up in a delightfully presented manner."
+    },
+    {
+        "title": "Eco-Friendly Gifts",
+        "desktopImage": "/gifting/desktop/eco_friendly.webp",
+        "mobileImage": "/gifting/mobile/eco_friendly.webp",
+        "description": "Grab Eco-friendly gifts that not only make your recipient’s face light up but reduce carbon footprint as well. These are made using sustainable materials and ethical practices."
+    },
+    {
+        "title": "Memory Boxes",
+        "desktopImage": "/gifting/desktop/memory.webp",
+        "mobileImage": "/gifting/mobile/memory.webp",
+        "description": "Memory Boxes are a charming way to cherish memories, filled with assorted trinkets that evoke a sense of nostalgia in the receiver. Each item in this keepsake box beautifully captures the essence of meaningful moments spent together"
+    },
+    {
+        "title": "Events gifting",
+        "desktopImage": "/gifting/desktop/events.webp",
+        "mobileImage": "/gifting/mobile/events.webp",
+        "description": "These gifts are designed exclusively for special events, from weddings to birthdays. Make important days extra special with this thoughtful and creative gesture."
+    }
+]
