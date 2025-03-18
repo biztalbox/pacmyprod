@@ -1,4 +1,3 @@
-import Gifting from '@/components/Gifting'
 import { redirect } from 'next/navigation';
 import React from 'react'
 

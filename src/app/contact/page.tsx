@@ -1,6 +1,12 @@
 "use client"
+import { Metadata } from 'next';
 import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
+
+export const metadata: Metadata = {
+    title: "Contact Us",
+    description: "Pack My Product is a platform that helps you pack your products for your next move.",
+  };
 
 const ContactPage = () => {
 

@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: "Aout Us",
+    description: "Pack My Product is a platform that helps you pack your products for your next move.",
+  };
+  
 const About = () => {
     return (
         <main>
