@@ -2,8 +2,8 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "Aout Us",
-    description: "Pack My Product is a platform that helps you pack your products for your next move.",
+    title: "Pac My Product: Premium Packaging Printing & Corporate Gifting company",
+    description: "Pac My Product is a leading provider of tailor-made packaging printing and gifting solutions. All our products are crafted with meticulous detail, without compromising quality.",
   };
   
 const About = () => {
@@ -21,7 +21,7 @@ const About = () => {
             <section className='py-16 text-foreground bg-secondary'>
 
                 <div className="container flex flex-col md:flex-row md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
-                    <img src="/who_are_we.webp" alt="About Image" className='w-fit rounded-lg' />
+                    <img src="/who_are_we.webp" title="Corporate Gifting Company | Custom Business Gifts & Hampers" alt="Find the perfect corporate gifts with our customized business gifting solutions. From luxury hampers to branded gifts, we have options for every occasion" className='w-fit rounded-lg' />
                     <div className="flex flex-col gap-8">
                         <h2>Expertly crafted, professionally presented</h2>
                         <p>We offer high-quality gifting and packaging solutions for every occasion. With over 15 years of experience and a team of highly skilled individuals, we treasure and preserve the traditional essence of gifting and packaging.</p>
