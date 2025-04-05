@@ -3,39 +3,6 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://pacmyproduct.com' // Replace with your actual domain
 
-  // Gifting subpages
-  const giftingPages = [
-    'corporate-gifting',
-    'joining-kit',
-    'festive-gifting',
-    'self-care-and-wellness-kits',
-    'subscription-gifts',
-    'milestone-celebration',
-    'home-and-kitchen-kit',
-    'artisan-and-handmade-gifts'
-  ]
-
-  // Kappa subpages
-  const kappaPages = [
-    'cosmetic-boxes',
-    'perfume-boxes',
-    'liquor-boxes',
-    'electronic',
-    'automobile',
-    'gifting'
-  ]
-
-  // Mono subpages
-  const monoPages = [
-    'cosmetic-boxes',
-    'perfume-boxes',
-    'liquor-boxes',
-    'lighting',
-    'automobile',
-    'food-and-beverage',
-    'pharmaceutical',
-    'agriculture'
-  ]
 
   // Base routes
   const routes = [
@@ -84,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Add gifting subpages (8 pages)
-  const giftingRoutes = Array.from({ length: 8 }, (_, i) => ({
+  const giftingRoutes = Array.from({ length: 12 }, (_, i) => ({
     url: `${baseUrl}/gifting/${i + 1}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
