@@ -84,24 +84,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Add gifting subpages (8 pages)
-  const giftingRoutes = Array.from({ length: 8 }, (_, index) => ({
-    url: `${baseUrl}/gifting/${index}`,
+  const giftingRoutes = Array.from({ length: 8 }, (_, i) => ({
+    url: `${baseUrl}/gifting/${i + 1}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
   // Add kappa subpages (6 pages)
-  const kappaRoutes = Array.from({ length: 6 }, (_, index) => ({
-    url: `${baseUrl}/kappa/${index}`,
+  const kappaRoutes = Array.from({ length: 6 }, (_, i) => ({
+    url: `${baseUrl}/kappa/${i + 1}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
   // Add mono subpages (8 pages)
-  const monoRoutes = Array.from({ length: 8 }, (_, index) => ({
-    url: `${baseUrl}/mono/${index}`,
+  const monoRoutes = Array.from({ length: 8 }, (_, i) => ({
+    url: `${baseUrl}/mono/${i + 1}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
