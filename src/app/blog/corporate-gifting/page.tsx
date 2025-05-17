@@ -2,8 +2,46 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import blogData from "@/data/blog.json";
+import { Metadata } from "next";
 
-const page = () => {
+export const metadata: Metadata = {
+  title: "Corporate Gifting: The Little Touch That Makes Big Connections | Pac My Product Blog",
+  description: "A handwritten note. A well-chosen box of treats. A monogram desk accessory. These are not just presents — they are touchpoints in a relationship.",
+  alternates: {
+    canonical: "https://pacmyproduct.com/blog/corporate-gifting",
+  },
+  openGraph: {
+    title: "Corporate Gifting: The Little Touch That Makes Big Connections",
+    description: "A handwritten note. A well-chosen box of treats. A monogram desk accessory. These are not just presents — they are touchpoints in a relationship.",
+    type: "article",
+    url: "https://pacmyproduct.com/blog/corporate-gifting",
+    images: [
+      {
+        url: "https://pacmyproduct.com/blog/corporate-gifting.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Corporate Gifting",
+      },
+    ],
+    publishedTime: "2024-03-17",
+    siteName: "Pac My Product",
+    authors: ["Pac My Product"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Gifting: The Little Touch That Makes Big Connections",
+    description: "A handwritten note. A well-chosen box of treats. A monogram desk accessory. These are not just presents — they are touchpoints in a relationship.",
+    images: ["https://pacmyproduct.com/blog/corporate-gifting.jpg"],
+    creator: "@pacmyproduct",
+  },
+  other: {
+    "article:published_time": "2024-03-17",
+    "article:section": "Packaging & Gifting",
+    "article:tag": ["Packaging", "Corporate Gifting", "Business Solutions"],
+  },
+};
+
+export default function Page() {
   const blog = blogData.blogs.find(blog => blog.slug === "corporate-gifting");
 
   return (
@@ -120,6 +158,4 @@ const page = () => {
       </section>
     </main>
   );
-};
-
-export default page;
+}
