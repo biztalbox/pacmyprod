@@ -26,6 +26,10 @@
   @apply bg-background
 }
 
+.blogPage a {
+  @apply text-primary;
+}
+
 .redish_section {
   @apply bg-gradient-to-b from-redish to-background;
 }

@@ -36,6 +36,7 @@ const Header = () => {
                         <Link href="/about" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>About</Link>
                         <Link href="/packaging" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Packaging</Link>
                         <Link href="/gifting" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Gifting</Link>
+                        <Link href="/blog" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Blog</Link>
                         <Link href="/contact" className="text-gray-400 hover:bg-overlay hover:text-white py-4 px-5" onClick={toggleMenu}>Contact</Link>
                     </nav>
                 )}

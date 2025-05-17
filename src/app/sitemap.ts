@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import blogData from '@/data/blog.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://pacmyproduct.com' // Replace with your actual domain
@@ -48,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.9,
+    },
   ]
 
   // Add gifting subpages (8 pages)
@@ -74,5 +81,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...routes, ...giftingRoutes, ...kappaRoutes, ...monoRoutes]
+  // Add blog post pages
+  const blogRoutes = blogData.blogs.map(blog => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: new Date(blog.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...routes, ...giftingRoutes, ...kappaRoutes, ...monoRoutes, ...blogRoutes]
 } 

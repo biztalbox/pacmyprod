@@ -1,0 +1,12 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pacmyproduct.com/sitemap.xml
+
+# Disallow admin and private routes
+Disallow: /api/
+
+# Crawl-delay for all bots
+Crawl-delay: 10 

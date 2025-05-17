@@ -1,0 +1,13 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "corporate-gifting",
+      "title": "Corporate Gifting: The Little Touch That Makes Big Connections",
+      "excerpt": "A handwritten note. A well-chosen box of treats. A monogram desk accessory. These are not just presents — they are touchpoints in a relationship",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/corporate-gifting.jpg",
+      "date": "17 May 2025"
+    }
+  ]
+} 
