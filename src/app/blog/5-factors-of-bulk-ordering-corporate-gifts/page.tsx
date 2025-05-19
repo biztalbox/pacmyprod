@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const blog = blogData.blogs.find(blog => blog.slug === "corporate-gifting");
+  const blog = blogData.blogs.find(blog => blog.slug === "5-factors-of-bulk-ordering-corporate-gifts");
 
   return (
     <main className="min-h-screen bg-gray-900 px-4 sm:px-6 lg:px-8 text-white blogPage">
