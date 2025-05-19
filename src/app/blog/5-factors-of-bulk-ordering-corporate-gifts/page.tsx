@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://pacmyproduct.com/blog/5-factors-of-bulk-ordering-corporate-gifts",
     images: [
       {
-        url: "https://pacmyproduct.com/blog/corporate-gifting.jpg",
+        url: "https://pacmyproduct.com/blog/article-2.jfif",
         width: 1200,
         height: 630,
         alt: "Bulk Corporate Gifts",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "5 Factors to Consider Before You Order Bulk Corporate Gifts",
     description: "Learn the key factors to consider when ordering bulk corporate gifts, from quality evaluation to delivery timelines and transparent pricing.",
-    images: ["https://pacmyproduct.com/blog/corporate-gifting.jpg"],
+    images: ["https://pacmyproduct.com/blog/article-2.jfif"],
     creator: "@pacmyproduct",
   },
   other: {
