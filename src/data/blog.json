@@ -8,6 +8,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/corporate-gifting.jpg",
       "date": "17 May 2025"
+    },
+    {
+      "id": 2,
+      "slug": "5-factors-of-bulk-ordering-corporate-gifts",
+      "title": "5 Factors to Consider Before You Order Bulk Corporate Gifts",
+      "excerpt": "Learn the key factors to consider when ordering bulk corporate gifts, from quality evaluation to delivery timelines and transparent pricing.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-2.jfif",
+      "date": "19 May 2025"
     }
   ]
 } 
