@@ -1,35 +1,47 @@
 [
     {
+        "id": 1,
+        "slug": "cosmetic-boxes",
         "title": "Cosmetic Boxes",
         "desktopImage": "/Kappa/desktop/cosmetic.webp",
         "mobileImage": "/Kappa/mobile/cosmetic.webp",
         "description": "PMP Kappa boxes offer stylish packaging that protects cosmetics and enhances the shelf appeal."
     },
     {
+        "id": 2,
+        "slug": "perfume-boxes",
         "title": "Perfume Boxes",
         "desktopImage": "/Kappa/desktop/perfume.webp",
         "mobileImage": "/Kappa/mobile/perfume.webp",
         "description": "Perfume packaging is designed to provide secure, elegant protection, while adding a luxurious unboxing experience."
     },
     {
+        "id": 3,
+        "slug": "liquor-boxes",
         "title": "Liquor Boxes",
         "desktopImage": "/Kappa/desktop/liquor.webp",
         "mobileImage": "/Kappa/mobile/liquor.webp",
         "description": "Pac My Product offers sturdy packaging that ensures the protection of liquor bottles during transportation. These boxes prevent breakage while offering a sophisticated design for a premium feel."
     },
     {
+        "id": 4,
+        "slug": "electronic",
         "title": "Electronic",
         "desktopImage": "/Kappa/desktop/electronic.webp",
         "mobileImage": "/Kappa/mobile/electronic.webp",
         "description": "Designed with durability in mind, packaging for electronics ensures that delicate devices are well-protected from damage, moisture, and dust while providing a functional exterior."
     },
     {
+        "id": 5,
+        "slug": "automobile",
         "title": "Automobile",
         "desktopImage": "/Kappa/desktop/automobile.webp",
         "mobileImage": "/Kappa/mobile/automobile.webp",
         "description": "Kappa packaging for automobiles protects the integrity of the product."
     },
     {
+        "id": 6,
+        "slug": "gifting",
         "title": "Gifting",
         "desktopImage": "/Kappa/desktop/gifting.webp",
         "mobileImage": "/Kappa/mobile/gifting.webp",

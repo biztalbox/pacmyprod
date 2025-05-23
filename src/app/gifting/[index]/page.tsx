@@ -1,21 +1,42 @@
 import SlidesContainer from '@/components/slidesContainer'
 import projectData from '@/data/gifting.json'
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
-export const metadata: Metadata = {
-    title: "Gifting Us",
-    description: "Pack My Product is a platform that helps you pack your products for your next move.",
-  };
+export async function generateMetadata({ params }: { params: { index: string } }): Promise<Metadata> {
+    const project = projectData.find(p => p.slug === params.index);
+    
+    if (!project) {
+        return {
+            title: "Not Found",
+            description: "The page you are looking for does not exist.",
+        };
+    }
+
+    return {
+        title: `${project.title} | Pac My Product`,
+        description: project.description,
+        alternates: {
+            canonical: `https://pacmyproduct.com/gifting/${project.slug}`,
+        },
+    };
+}
 
 export default async function Page({
     params,
 }: {
-    params: Promise<{ index: number }>
+    params: { index: string }
 }) {
-    const index = (await params).index
+    const project = projectData.find(p => p.slug === params.index);
+    
+    if (!project) {
+        notFound();
+    }
+
+    const index = projectData.indexOf(project);
+    
     return (
         <main className='redish_section'>
-
             <SlidesContainer currentProject={index} projectData={projectData} />
         </main>
     )

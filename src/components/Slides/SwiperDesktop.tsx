@@ -6,31 +6,28 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow'
 import SwiperCore from 'swiper'
 import { EffectCoverflow, Pagination, Keyboard } from 'swiper/modules';
-import { usePathname } from 'next/navigation';
-
-// Define a type for the project data
-interface Project {
-    title: string
-    desktopImage: string
-    mobileImage: string
-    description: string
-}
+// import { usePathname } from 'next/navigation';
+import Project from '@/types/projects';
 
 // Initialize Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination, Keyboard])
 
-const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> = ({ currentSlide, projectData }) => {
-    // const router = useRouter();
+const SwiperDesktop: React.FC<{ 
+    currentSlide: number, 
+    projectData: Project[],
+    onSlideChange?: (index: number) => void 
+}> = ({ currentSlide, projectData, onSlideChange }) => {
     const projects: Project[] = projectData as Project[]
-    const pathname = usePathname()
+    // const pathname = usePathname()
 
     let lastMousePosition = { x: 0, y: 0 };
     const movementThreshold = 5; // Minimum movement in pixels to trigger the effect
 
     const handleSlideChange = (swiper: any) => {
         const currentIndex = swiper.activeIndex;
-        const pageName = pathname.split('/')[1];
-        window.history.pushState(null, '', `/${pageName}/${currentIndex + 1}`);
+        if (onSlideChange) {
+            onSlideChange(currentIndex);
+        }
     };
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, slide: HTMLDivElement) => {
@@ -61,10 +58,10 @@ const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> 
 
     return (
         <Swiper
-            direction="horizontal" // Change to horizontal for desktop
+            direction="horizontal"
             slidesPerView={1}
             spaceBetween={0}
-            centeredSlides={false} // Ensure only one slide is visible at a time
+            centeredSlides={false}
             scrollbar={{ draggable: true }}
             effect="coverflow"
             coverflowEffect={{
@@ -73,11 +70,11 @@ const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> 
                 depth: 800,
                 modifier: 3,
                 slideShadows: false,
-            }}// Adjust for desktop
+            }}
             onSlideChangeTransitionEnd={handleSlideChange}
             pagination={{ clickable: true }}
             speed={600}
-            initialSlide={currentSlide <= projects.length ? currentSlide - 1 : 1}
+            initialSlide={currentSlide}
             keyboard={{ enabled: true }}
             className='h-[80vh] xl:min-h-screen lg:h-[100vh] !w-[100%] flex items-center justify-center'
         >
@@ -85,7 +82,7 @@ const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> 
                 <SwiperSlide key={index} className='!flex items-center justify-center'>
                     <div
                         style={{
-                            backgroundImage: `url(${project.desktopImage})`, // Use desktopImage
+                            backgroundImage: `url(${project.desktopImage})`,
                             backgroundSize: 'contain',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
@@ -107,4 +104,4 @@ const SwiperDesktop: React.FC<{ currentSlide: number, projectData: Project[] }> 
     )
 }
 
-export default SwiperDesktop
+export default SwiperDesktop;

@@ -27,7 +27,7 @@ const HeroHome2 = () => {
                 </Link>
 
                 {/* Right Section: Gifting */}
-                <Link href="/gifting/1" className="md:w-1/2 py-24 md:py-14 2xl:py-24 border-t-[1px] md:border-t-0 xl:min-h-screen border-devider text-foreground flex md:mt-auto flex-col gap-10 relative group gifting">
+                <Link href="/gifting/corporate-gifting" className="md:w-1/2 py-24 md:py-14 2xl:py-24 border-t-[1px] md:border-t-0 xl:min-h-screen border-devider text-foreground flex md:mt-auto flex-col gap-10 relative group gifting">
                     {/* <div className='flex flex-col gap-10 p-0'> */}
                     <div className="flex flex-col-reverse md:flex-col gap-10 lg:gap-10 2xl:gap-20 md:!mt-[225px] lg:!mt-[80px] lg:!ml-[11px] xl:!ml-0 xl:!mt-[80px] 2xl:!mt-0">
                         <div className="flex flex-col-reverse md:flex-col lg:flex-row items-center md:items-end gap-5 md:justify-between">

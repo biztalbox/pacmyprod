@@ -4,7 +4,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Pac My Product: Premium Packaging Printing & Corporate Gifting company",
     description: "Pac My Product is a leading provider of tailor-made packaging printing and gifting solutions. All our products are crafted with meticulous detail, without compromising quality.",
-  };
+    alternates: {
+        canonical: "https://pacmyproduct.com/about",
+    },
+};
   
 const About = () => {
     return (

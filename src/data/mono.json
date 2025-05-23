@@ -1,47 +1,63 @@
 [
     {
+        "id": 1,
+        "slug": "cosmetic-boxes",
         "title": "Cosmetic Boxes",
         "desktopImage": "/mono/desktop/cosmetic.webp",
         "mobileImage": "/mono/mobile/cosmetic.webp",
         "description": "Elegant, custom packaging for cosmetics precisely based on customer demands."
     },
     {
+        "id": 2,
+        "slug": "perfume-boxes",
         "title": "Perfume Boxes",
         "desktopImage": "/mono/desktop/perfume.webp",
         "mobileImage": "/mono/mobile/perfume.webp",
         "description": "Crafted for elegance and protection, our durable mono carton solutions for perfume packaging guarantee both product safety and striking visual appeal."
     },
     {
+        "id": 3,
+        "slug": "liquor-boxes",
         "title": "Liquor Boxes",
         "desktopImage": "/mono/desktop/liquor.webp",
         "mobileImage": "/mono/mobile/liquor.webp",
         "description": "Mono cartons are designed for liquor packaging to ensure strength and visual appeal"
     },
     {
+        "id": 4,
+        "slug": "lighting",
         "title": "Lighting",
         "desktopImage": "/mono/desktop/light.webp",
         "mobileImage": "/mono/mobile/light.webp",
         "description": "Secure packaging for lighting products to safeguard delicate components during transportation"
     },
     {
+        "id": 5,
+        "slug": "automobile",
         "title": "Automobile",
         "desktopImage": "/mono/desktop/automobile.webp",
         "mobileImage": "/mono/mobile/automobile.webp",
         "description": "PMP has robust mono packaging for automobile components to offer protection against damage"
     },
     {
+        "id": 6,
+        "slug": "food-and-beverage",
         "title": "Food & Beverage",
         "desktopImage": "/mono/desktop/food.webp",
         "mobileImage": "/mono/mobile/food.webp",
         "description": "Food Grade packaging solutions for food and beverage products. Get freshness and quality"
     },
     {
+        "id": 7,
+        "slug": "pharmaceutical",
         "title": "Pharmaceutical",
         "desktopImage": "/mono/desktop/pharmaceutical.webp",
         "mobileImage": "/mono/mobile/pharmaceutical.webp",
         "description": " Strong and sustainable packaging for pharmaceutical products."
     },
     {
+        "id": 8,
+        "slug": "agriculture",
         "title": "Agriculture",
         "desktopImage": "/mono/desktop/agriculture.webp",
         "mobileImage": "/mono/mobile/agriculture.webp",

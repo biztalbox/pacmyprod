@@ -1,8 +1,11 @@
 import { MetadataRoute } from 'next'
 import blogData from '@/data/blog.json'
+import kappaData from '@/data/kappa.json'
+import monoData from '@/data/mono.json'
+import giftingData from '@/data/gifting.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://pacmyproduct.com' // Replace with your actual domain
+  const baseUrl = 'https://pacmyproduct.com' 
 
 
   // Base routes
@@ -57,25 +60,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Add gifting subpages (8 pages)
-  const giftingRoutes = Array.from({ length: 12 }, (_, i) => ({
-    url: `${baseUrl}/gifting/${i + 1}`,
+  // Add gifting subpages with slugs
+  const giftingRoutes = giftingData.map(item => ({
+    url: `${baseUrl}/gifting/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Add kappa subpages (6 pages)
-  const kappaRoutes = Array.from({ length: 6 }, (_, i) => ({
-    url: `${baseUrl}/kappa/${i + 1}`,
+  // Add kappa subpages with slugs
+  const kappaRoutes = kappaData.map(item => ({
+    url: `${baseUrl}/kappa/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Add mono subpages (8 pages)
-  const monoRoutes = Array.from({ length: 8 }, (_, i) => ({
-    url: `${baseUrl}/mono/${i + 1}`,
+  // Add mono subpages with slugs
+  const monoRoutes = monoData.map(item => ({
+    url: `${baseUrl}/mono/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
