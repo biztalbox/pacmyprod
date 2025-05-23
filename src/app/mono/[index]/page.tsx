@@ -3,8 +3,14 @@ import projectData from '@/data/mono.json'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-export async function generateMetadata({ params }: { params: { index: string } }): Promise<Metadata> {
-    const project = projectData.find(p => p.slug === params.index);
+interface PageProps {
+    params: Promise<{ index: string }>
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const resolvedParams = await params;
+    const project = projectData.find(p => p.slug === resolvedParams.index);
     
     if (!project) {
         return {
@@ -22,12 +28,9 @@ export async function generateMetadata({ params }: { params: { index: string } }
     };
 }
 
-export default async function Page({
-    params,
-}: {
-    params: { index: string }
-}) {
-    const project = projectData.find(p => p.slug === params.index);
+export default async function Page({ params }: PageProps) {
+    const resolvedParams = await params;
+    const project = projectData.find(p => p.slug === resolvedParams.index);
     
     if (!project) {
         notFound();
