@@ -62,11 +62,17 @@ export default function Page() {
       </section>
       <section className="container mx-auto py-16">
         <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-          Corporate gifting has become an important touchpoint in business, representing the values of a brand and creating meaningful connections with clients, employees, and partners. There are a few important things that you need to consider when you are planning to place an order for bulk corporate gifts, especially with one of the best corporate gift manufacturers in Delhi, such as Pac My Product.
+          Corporate gifting has become an important touchpoint in business, representing the values of a brand 
+          and creating meaningful connections with clients, employees, and partners. There are a few important 
+          things that you need to consider when you are planning to place an order for bulk corporate gifts, 
+          especially with one of the best corporate gift manufacturers in Delhi, such as Pac My Product.
         </p>
 
         <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-          Here are five key factors to consider before ordering. They will ensure your presents arrive on time, make your company look good, and remind your recipient that you're associated with quality and a spirit of giving.
+          Here are five key factors to consider before ordering. They will 
+          ensure your presents arrive on time, make your company look good, 
+          and remind your recipient that you're associated with quality and 
+          a spirit of giving.
         </p>
 
         <h2 className="text-2xl font-semibold text-white mb-4">
@@ -74,11 +80,18 @@ export default function Page() {
         </h2>
 
         <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-          There is a temptation to prioritize price when ordering something in bulk, but you still want quality to be your primary goal. Your corporate gifts are a direct representation of your business, which makes it necessary to avoid low-quality and low-cost gifts that do not reflect your brand.
+          There is a temptation to prioritize price when ordering something 
+          in bulk, but you still want quality to be your primary goal. 
+          Your corporate gifts are a direct representation of your business, 
+          which makes it necessary to avoid low-quality and low-cost gifts that do not reflect your brand.
         </p>
 
         <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-          World Wide Graphics knows this only too well. We provide samples so you can see the materials, finishes, and durability before investing in a larger order. Whether personalised diaries, pens, or promotional gifts, we hold a high level of quality control for every product.
+          World Wide Graphics knows this only too well. We provide 
+          samples so you can see the materials, 
+          finishes, and durability before investing 
+          in a larger order. Whether personalised diaries,
+          pens, or promotional gifts, we hold a high level of quality control for every product.
         </p>
 
         <h2 className="text-2xl font-semibold text-white mb-4">

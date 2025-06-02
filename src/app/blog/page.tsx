@@ -32,12 +32,17 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
+  // Sort blogs by date descending (most recent first)
+  const sortedBlogs = [...blogData.blogs].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <main>
       <section className="container mx-auto px-4 py-16 min-h-screen text-white flex flex-col gap-16">
         <h1 className="text-3xl font-bold mb-8 text-center">Our Blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogData.blogs.map((blog) => (
+          {sortedBlogs.map((blog) => (
             <a href={`/blog/${blog.slug}`} key={blog.id}>
               <article
                 className="bg-background rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
