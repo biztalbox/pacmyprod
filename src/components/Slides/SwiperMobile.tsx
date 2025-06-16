@@ -72,7 +72,7 @@ const SwiperMobile: React.FC<{
           <div
             style={{
               backgroundImage: `url(${project.mobileImage})`,
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
