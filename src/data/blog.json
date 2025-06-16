@@ -17,6 +17,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-2.jfif",
       "date": "19 May 2025"
+    },
+    {
+      "id": 3,
+      "slug": "premium-cosmetic-box-manufacturers",
+      "title": "Premium Cosmetic Box Manufacturers – Elevate Your Brand with Pac My Product",
+      "excerpt": "In today's highly competitive beauty industry, packaging is more than just a container – it's a brand statement. With countless cosmetic products on store shelves and digital marketplaces, your packaging must speak volumes before the product is even opened.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-3.jpg",
+      "date": "02 June 2025"
     }
   ]
 } 
