@@ -78,7 +78,7 @@ const SwiperMobile: React.FC<{
             }}
             className="mobile_slide_3d w-full h-full flex items-center justify-center"
           >
-            <div className="flex flex-row gap-5 justify-center items-end py-5 px-5 w-full h-full">
+            <div className="flex flex-nowrap flex-row gap-5 items-end pb-20 px-5 w-full h-full">
               <div className="content flex flex-col gap-5 w-72 text-black">
                 <h2 className="text-3xl text-stroke-2 text-stroke-black text-red-600">
                   {project.title}
