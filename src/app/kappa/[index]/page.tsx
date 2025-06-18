@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     return {
-        title: `${project.title} | Pac My Product`,
-        description: project.description,
+        title: `${project.metaTitle} | Pac My Product`,
+        description: project.metaDescription,
         alternates: {
             canonical: `https://pacmyproduct.com/kappa/${project.slug}`,
         },

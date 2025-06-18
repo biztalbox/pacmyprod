@@ -3,54 +3,68 @@
         "id": 1,
         "slug": "corporate-gifting",
         "title": "Corporate Gifting",
+        "metaTitle":"Best Corporate Gifting Companies in India | Custom Gifts",
+        "metaDescription":"Discover trusted corporate gifting companies in India. Unique, branded gift solutions for events, clients, and employee engagement.", 
         "desktopImage": "/gifting/desktop/corporate.webp",
         "mobileImage": "/gifting/mobile/corporate.webp",
-        "description": "Thoughtfully curated corporate gifting solutions that help build professional relationships and create lasting memories."
+        "description": "Corporate gifting companies make it easy to send thoughtful, high-quality gifts. Perfect for clients, teams, or events, they offer curated options that build strong relationships and leave a lasting impression."
     },
     {
         "id": 2,
         "slug": "joining-kit",
-        "title": "Joining Kit",
+        "title": "Joining Kit Gifting",
+        "metaTitle":"Employee Joining Kit Gifting in India | Custom Welcome Kits",
+        "metaDescription":"Custom employee joining kits in India with welcome gifts, useful items, and branded packaging to make onboarding special",
         "desktopImage": "/gifting/desktop/joining_kit.webp",
         "mobileImage": "/gifting/mobile/joining.webp",
-        "description": "Customised welcome kit for new team members. The kit features branded merchandise, essential tools, and resources to make them feel valued and ready for their role"
+        "description": "Joining kit gifting is a great way to welcome new employees. It includes useful items and company goodies that make them feel special, supported, and excited to start their journey."
     },
     {
         "id": 3,
         "slug": "festive-gifting",
-        "title": "Festive Gifting",
+        "title": "Festive Gifting Boxes",
+        "metaTitle":"Festive Gifting Boxes in India | Diwali & Occasion Gifts",
+        "metaDescription":"Celebrate festivals with premium gifting boxes. Ideal for Diwali, Holi, Eid, and corporate gifting. Custom festive packaging available in India.",
         "desktopImage": "/gifting/desktop/festival.webp",
         "mobileImage": "/gifting/mobile/festival.webp",
-        "description": "Festive kits that reflect the holiday spirit and special occasions. A perfect present that brings joy to the recipient"
+        "description": "Festive gifting boxes make celebrations extra special. Filled with thoughtful goodies and beautiful packaging, they&apos;re perfect for sharing joy, showing love, and making every festival moment more memorable and fun."
     },
     {
         "id": 4,
         "slug": "self-care-and-wellness-kits",
         "title": "Self-Care and Wellness Kits",
+        "metaTitle":"Self-Care & Wellness Kits in India | Relaxing Gift Ideas",
+        "metaDescription":"Thoughtful self-care and wellness kits in India. Ideal for personal use, gifting, or corporate wellness. Includes eco-friendly and relaxing options.",
         "desktopImage": "/gifting/desktop/self_care.webp",
         "mobileImage": "/gifting/mobile/selfcare.webp",
-        "description": "Kits focused on relaxing and health related products such as candles, skincare, and aromatherapy, promoting personal well-being and stress relief"
+        "description": "Self-care and wellness kits help you relax and feel better. They include useful and calming items, making it easy to take care of yourself and enjoy a peaceful break anytime."
     },
     {
         "id": 5,
         "slug": "subscription-gifts",
-        "title": "Subscription Gifts",
+        "title": "Subscription Gifts Boxes",
+        "metaTitle":"Shop the best Subscription Boxes Online in India ",
+        "metaDescription":"Discover unique subscription gift boxes in India. Curated monthly surprises for wellness, lifestyle, food & more. Great for personal or corporate gifting.",
         "desktopImage": "/gifting/desktop/subscription.webp",
         "mobileImage": "/gifting/mobile/subscription.webp",
-        "description": "Filled with love and gratitude, these subscription kits offer products including books, snacks, wellness, and beauty products"
+        "description": "Subscription gift boxes are a fun way to surprise someone regularly. Packed with handpicked items, they bring joy, excitement, and something new to enjoy every month or special occasion."
     },
     {
         "id": 6,
         "slug": "milestone-celebration",
-        "title": "Milestone Celebration",
+        "title": "Milestone Celebration Gift ",
+        "metaTitle":"Buy Milestone Celebration Gifts India | Thoughtful Packaging",
+        "metaDescription":"Celebrate key milestones with memorable gifts. Order beautifully packed celebration gifts for birthdays, anniversaries & achievements in India.",
         "desktopImage": "/gifting/desktop/milestone.webp",
         "mobileImage": "/gifting/mobile/milestone.webp",
-        "description": "Gifts to celebrate promotions, anniversaries, personal accomplishments, hard work and success of the individual"
+        "description": "Milestone celebration gifts make big moments even more special. Thoughtfully chosen for birthdays, anniversaries, or achievements, these gifts help you show love, pride, and joy in the most meaningful way."
     },
     {
         "id": 7,
         "slug": "home-and-kitchen-kit",
         "title": "Home and kitchen kit",
+        "metaTitle":"",
+        "metaDescription":"",
         "desktopImage": "/gifting/desktop/home_kitchen.webp",
         "mobileImage": "/gifting/mobile/home_kitchen.webp",
         "description": "Useful and attractive gift both cooking experiences offering ease and purpose in one package"
@@ -59,40 +73,51 @@
         "id": 8,
         "slug": "artisan-and-handmade-gifts",
         "title": "Artisan and Handmade Gifts",
+        "metaTitle":"Buy Artisan Gifts Online in India | Handcrafted Gifting",
+        "metaDescription":"Shop handcrafted artisan gifts online in India. Support local creators with unique, thoughtful gifts perfect for all occasions. Custom packaging available.",
         "desktopImage": "/gifting/desktop/handmade.webp",
         "mobileImage": "/gifting/mobile/handmade.webp",
-        "description": "Crafted with love and a lot of attention, these handmade gifts add a personal element and narrate a story that involves everyone who values special unique items"
+        "description": "Artisan and handmade gifts are crafted with care and creativity. Each piece is unique, making it a special way to share love, culture, and thoughtful memories with someone you care about."
     },
     {
         "id": 9,
         "slug": "travel-essentials",
-        "title": "Travel Essentials",
+        "title": "Travel Essentials Kits",
+        "metaTitle":"Travel Essentials Kit India | Smart & Compact Gifting",
+        "metaDescription":"Get compact, travel-ready kits ideal for corporate gifts and personal use. Custom-designed travel essentials for events, onboarding, and holidays.",
         "desktopImage": "/gifting/desktop/travel.webp",
         "mobileImage": "/gifting/mobile/travel.webp",
-        "description": "Curated selection of all the goodies that are essential for your long and short-term travel"
+        "description": "Travel essentials kits keep all your must-haves in one place. Packed with useful items, they make trips easier, more organized, and stress-free—perfect for vacations, work travel, or quick getaways."
+
     },
     {
         "id": 10,
         "slug": "eco-friendly-gifts",
-        "title": "Eco-Friendly Gifts",
+        "title": "Unique Eco Friendly Gifts",
+        "metaTitle":"Buy Eco Friendly & Sustainable Gifts Online | Pac my Product",
+        "metaDescription":"Choose from a range of eco-friendly gifts in India. Sustainable, reusable, and stylish gifting options for events, corporate needs, or personal occasions.",
         "desktopImage": "/gifting/desktop/eco_friendly.webp",
         "mobileImage": "/gifting/mobile/eco_friendly.webp",
-        "description": "Grab eco-friendly gifting kits for more sustainability"
+        "description": "Unique eco-friendly gifts are perfect for thoughtful giving. Made with sustainable materials, they&apos;re kind to the planet and full of charm—great for anyone who loves green, meaningful, and mindful gifting."
     },
     {
         "id": 11,
         "slug": "memory-boxes",
-        "title": "Memory Boxes",
+        "title": "Memory Boxes Gifting",
+        "metaTitle":"Shop Memory Boxes Online in India | Pac my Product",
+        "metaDescription":"Discover beautifully crafted memory boxes online in India with Pac my Product. Perfect for preserving keepsakes, gifts, and special life moments.",
         "desktopImage": "/gifting/desktop/memory.webp",
         "mobileImage": "/gifting/mobile/memory.webp",
-        "description": "We ensure that our memory box amplifies your good old memories"
+        "description": "Memory boxes gifting is a beautiful way to save special moments. Filled with photos, notes, or keepsakes, they help you cherish memories and share meaningful stories with loved ones."
     },
     {
         "id": 12,
         "slug": "events",
-        "title": "Events",
+        "title": "Events Gift Boxes ",
+        "metaTitle":"Custom Event Gift Boxes India | Branded Packaging Ideas",
+        "metaDescription":"Explore custom event gift boxes in India with unique branded packaging ideas. Perfect for corporate events, weddings, festivals, and special occasions.",
         "desktopImage": "/gifting/desktop/events.webp",
         "mobileImage": "/gifting/mobile/events.webp",
-        "description": "From weddings to birthdays, these event-centered gifts add a special touch to any party making it stick in everyone's mind"
+        "description": "Events gift boxes are perfect for making any occasion special. Thoughtfully packed with useful and fun items, they add a personal touch to weddings, parties, conferences, and all kinds of celebrations."
     }
 ]
