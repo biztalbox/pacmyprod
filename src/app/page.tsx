@@ -5,8 +5,8 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Pac My Product: Premium Printing & Packaging Solutions",
-  description: "Pac My Product exclusively offers printing and packaging solutions to represent a brand's perspective and enhance user experience. Get custom boxes, labels, and more with premium quality and efficient delivery",
+  title: "Premium Printing & Gifting Packaging in India | Custom Luxury Solutions",
+  description: "Discover high-end printing and gifting packaging solutions in India. Custom boxes, luxury finishes, and eco-friendly materials to elevate your brand for events, corporate gifts, and retail.",
   alternates: {
     canonical: "https://pacmyproduct.com",
   },

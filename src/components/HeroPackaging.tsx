@@ -43,6 +43,7 @@ const HeroHome2 = () => {
             </div>
             <Counter />
         </section>
+        
     )
 }
 
