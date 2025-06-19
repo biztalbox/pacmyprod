@@ -7,7 +7,7 @@ const About = () => {
             <section className='py-24 text-foreground'>
 
                 <div className="container flex flex-col md:flex-row md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
-                    <img src="/about.webp" alt="About Image" className='w-96' />
+                    <img src="/packing.webp" alt="About Image" className='w-96' />
                     <div className="flex flex-col gap-8">
                         <h2>Comprehensive Branded Packaging Solutions for Every Industry</h2>
                         <p>Pac My Product specializes in branded packaging services targeted to a variety of businesses. Whether you are in cosmetics, electronics,
@@ -31,7 +31,7 @@ const About = () => {
             <section className='py-24 text-foreground'>
 
                 <div className="container flex flex-col md:flex-row-reverse md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
-                    <img src="/about.webp" alt="About Image" className='w-96' />
+                    <img src="/gifting.webp" alt="About Image" className='w-96' />
                     <div className="flex flex-col gap-8 ">
                         <h2>Corporate Gifting Solutions: From Employee Kits to Executive Hampers </h2>
                         <p>
