@@ -35,7 +35,7 @@ const HeroHome2 = () => {
                             </div>
                         </div>
                         <div className="flex flex-col items-center md:items-end">
-                            <h1>Mono Cartoons</h1>
+                            <h1>Mono Cartons</h1>
                         </div>
                     </div>
                     {/* <div className="absolute inset-0 bg-overlay opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div> */}

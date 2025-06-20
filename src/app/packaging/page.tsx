@@ -4,15 +4,15 @@ import Link from 'next/link';
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: "Kappa Boxes",
-  description: "Pack My Product is a platform that helps you pack your products for your next move.",
+  title: " Mono and Kappa Boxes Packaging in India | Custom and Durable",
+  description: "Explore high-quality mono and kappa box packaging in India. Ideal for FMCG, cosmetics, pharma and gifting. Custom sizes, strong build and premium prints.",
 };
 
 const page = () => {
   return (<>
     <HeroPackaging />
     <section className='py-16 text-foreground'>
-
+        
       <div className="container flex flex-col md:flex-row md:justify-between items-center text-center md:text-start gap-10 md:gap-16" >
         <img src="/packing.webp" alt="About Image" className='w-96' />
         <div className="flex flex-col gap-8">
