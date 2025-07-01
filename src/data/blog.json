@@ -26,6 +26,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-3.jpg",
       "date": "02 June 2025"
+    },
+    {
+      "id": 4,
+      "slug": "Mono-Carton-Boxes-Packaging-Services-in-India",
+      "title": "Mono Carton Boxes Packaging Services in India",
+      "excerpt": "In today’s retail and e-commerce world, packaging is your product’s first impression.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-4.jpg",
+      "date": "13 June 2025"
     }
   ]
 } 
