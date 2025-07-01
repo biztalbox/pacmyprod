@@ -1,21 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
+import blogData from "@/data/blog.json";
 
 export const metadata: Metadata = {
   title: "Mono Carton Boxes Packaging Services in India | Pac My Product Blog",
   description: "Explore top-quality mono carton box packaging services in India. Custom, luxury, eco-friendly solutions for FMCG, cosmetics, and premium brands.",
   alternates: {
-    canonical: "https://pacmyproduct.com/blog/mono-carton-boxes-packaging-services-india",
+    canonical: "https://pacmyproduct.com/blog/mono-carton-boxes-packing-services-in-india",
   },
   openGraph: {
     title: "Mono Carton Boxes Packaging Services in India",
     description: "Explore top-quality mono carton box packaging services in India. Custom, luxury, eco-friendly solutions for FMCG, cosmetics, and premium brands.",
     type: "article",
-    url: "https://pacmyproduct.com/blog/mono-carton-boxes-packaging-services-india",
+    url: "https://pacmyproduct.com/blog/mono-carton-boxes-packing-services-in-india",
     images: [
       {
-        url: "https://pacmyproduct.com/blog/article-mono-cartons.jpg",
+        url: "https://pacmyproduct.com/blog/article-4.jpg",
         width: 1200,
         height: 630,
         alt: "Mono Carton Packaging",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mono Carton Boxes Packaging Services in India",
     description: "Explore top-quality mono carton box packaging services in India. Custom, luxury, eco-friendly solutions for FMCG, cosmetics, and premium brands.",
-    images: ["https://pacmyproduct.com/blog/article-mono-cartons.jpg"],
+    images: ["https://pacmyproduct.com/blog/article-4.jpg"],
     creator: "@pacmyproduct",
   },
   other: {
@@ -40,11 +41,12 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const blog = blogData.blogs.find(blog => blog.id === "z);
   return (
     <main className="min-h-screen bg-gray-900 px-4 sm:px-6 lg:px-8 text-white blogPage">
       <section className="container mx-auto">
         <Image
-          src="/blog/mono-carton-packaging.jpg"
+          src={blog?.image }
           alt="Mono Carton Packaging Services"
           className="w-full h-auto"
           width={1000}
