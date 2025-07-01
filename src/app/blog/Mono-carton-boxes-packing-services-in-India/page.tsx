@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import blogData from "@/data/blog.json";
 
 export const metadata: Metadata = {
   title: "Mono Carton Boxes Packaging Services in India | Pac My Product Blog",
@@ -41,7 +40,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const blog = blogData.blogs.find(blog => blog.id == 4);
   return (
     <main className="min-h-screen bg-gray-900 px-4 sm:px-6 lg:px-8 text-white blogPage">
       <section className="container mx-auto">
