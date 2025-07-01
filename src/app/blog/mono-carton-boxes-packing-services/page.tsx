@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Mono Carton Boxes Packaging Services in India | Pac My Product Blog",
   description: "Explore top-quality mono carton box packaging services in India. Custom, luxury, eco-friendly solutions for FMCG, cosmetics, and premium brands.",
   alternates: {
-    canonical: "https://pacmyproduct.com/blog/mono-carton-boxes-packing-services-in-india",
+    canonical: "https://pacmyproduct.com/blog/mono-carton-boxes-packing-services",
   },
   openGraph: {
     title: "Mono Carton Boxes Packaging Services in India",
     description: "Explore top-quality mono carton box packaging services in India. Custom, luxury, eco-friendly solutions for FMCG, cosmetics, and premium brands.",
     type: "article",
-    url: "https://pacmyproduct.com/blog/mono-carton-boxes-packing-services-in-india",
+    url: "https://pacmyproduct.com/blog/mono-carton-boxes-packing-services",
     images: [
       {
         url: "https://pacmyproduct.com/blog/article-4.jpg",
