@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     creator: "@pacmyproduct",
   },
   other: {
-    "article:published_time": "2024-06-27",
     "article:section": "Packaging Solutions",
     "article:tag": ["Mono Carton Packaging", "Custom Boxes", "Product Packaging"],
   },
