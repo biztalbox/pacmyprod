@@ -88,8 +88,7 @@ Rigid boxes are what they are called, very rigid and inflexible. They don’t re
         </p>
 
         <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-          They package everyday objects like medicine boxes, FMCG packaging, snack pouches, or cosmetic tubes. And so, although they don’t come with the luxury factor of a rigid box, these are actually super practical and cost-efficient. They’re perfect for mass production, easy to carry around, and can be stored in large 
-          <br>amounts. They also offer ample space for branding, product details, and legal information. In industries like pharmaceuticals or personal care, where compliance and readability are as important as design, monocartons are a must-have.</br>
+          They package everyday objects like medicine boxes, FMCG packaging, snack pouches, or cosmetic tubes. And so, although they don’t come with the luxury factor of a rigid box, these are actually super practical and cost-efficient. They’re perfect for mass production, easy to carry around, and can be stored in large amounts. <br/> They also offer ample space for branding, product details, and legal information. In industries like pharmaceuticals or personal care, where compliance and readability are as important as design, monocartons are a must-have.
           </p>
 
         <h2 className="text-2xl font-semibold text-white mb-4">
