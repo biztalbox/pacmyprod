@@ -35,6 +35,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-4.jpg",
       "date": "1 July 2025"
+    },
+    {
+      "id": 5,
+      "slug": "rigid-box-vs-monocarton-box",
+      "title": "Rigid Box vs Monocarton: What is the Real Difference?",
+      "excerpt": "In today's highly competitive beauty industry, packaging is more than just a container – it's a brand statement. With countless cosmetic products on store shelves and digital marketplaces, your packaging must speak volumes before the product is even opened.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-5.webp",
+      "date": "05 July 2025"
     }
   ]
 } 
