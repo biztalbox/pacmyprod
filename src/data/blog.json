@@ -44,6 +44,24 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-5.webp",
       "date": "05 July 2025"
+    },
+    {
+      "id": 6,
+      "slug": "joining-kit-checklist-for-new-employees",
+      "title": "Joining Kit Checklist for New Employees: Make the First Day Memorable",
+      "excerpt": "In today's highly competitive beauty industry, packaging is more than just a container – it's a brand statement. With countless cosmetic products on store shelves and digital marketplaces, your packaging must speak volumes before the product is even opened.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-6.webp",
+      "date": "07 July 2025"
+    },
+    {
+      "id": 7,
+      "slug": "what-is-packaging-printing",
+      "title": "What Is Packaging Printing and Why Should Your Brand Care?",
+      "excerpt": "Discover what packaging printing is and why it matters for your brand. Boost recognition, shelf appeal, and customer trust with the right print strategy.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-7.webp",
+      "date": "07 July 2025"
     }
   ]
 } 
