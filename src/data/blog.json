@@ -62,6 +62,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-7.webp",
       "date": "07 July 2025"
+    },
+    {
+      "id": 8,
+      "slug": "luxury-branded-packaging",
+      "title": "Luxury Branded Packaging: What Sets Premium Brands Apart",
+      "excerpt": "Discover what makes luxury branded packaging stand out. From design to materials, see how premium brands create lasting impressions with elegant packaging.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-8.png",
+      "date": "12 July 2025"
     }
   ]
 } 
