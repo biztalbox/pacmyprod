@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
             service: 'gmail',
             auth: {
                 user: 'pacmyproduct@gmail.com', // replace with your email
-                pass: 'jozl rqnx piqa lndi', // replace with your email password
+                pass: 'bjhk rctu qsum nree', // replace with your email password
             },
         });
 
