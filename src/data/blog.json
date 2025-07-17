@@ -71,6 +71,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-8.png",
       "date": "12 July 2025"
+    },
+    {
+      "id": 9,
+      "slug": "premium-brands-packaging-over-ads",
+      "title": "Why Premium Brands Invest More in Packaging than in Advertising",
+      "excerpt": "Premium brands invest in packaging over advertising to enhance customer experience, build trust, and create lasting brand impressions at first glance.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-9.png",
+      "date": "15 July 2025"
     }
   ]
 } 
