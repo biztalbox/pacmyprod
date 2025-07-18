@@ -80,6 +80,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-9.png",
       "date": "15 July 2025"
+    },
+       {
+      "id": 10,
+      "slug": "custom-printed-packaging-india",
+      "title": "Why Your Brand Needs Custom Printed Packaging in India",
+      "excerpt": " Discover why custom printed packaging in India boosts brand identity, enhances customer experience, and sets your products apart in a competitive market.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-10.png",
+      "date": "18 July 2025"
     }
   ]
 } 
