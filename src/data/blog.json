@@ -89,6 +89,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-10.png",
       "date": "18 July 2025"
+    },
+      {
+      "id": 11,
+      "slug": "premium-festive-gift-boxes-delhi",
+      "title": "Premium Festive Gift Boxes in Delhi Boxed in Celebration",
+      "excerpt": "Celebrate in style with premium festive gift boxes in Delhi. Thoughtfully curated hampers, perfect for every occasion. Order now for doorstep delivery!",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-11.png",
+      "date": "22 July 2025"
     }
   ]
 } 
