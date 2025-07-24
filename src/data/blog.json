@@ -98,6 +98,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-11.png",
       "date": "22 July 2025"
+    },
+    {
+      "id": 12,
+      "slug": "right-mono-carton-box-importance",
+      "title": "Why Choosing the Right Mono Carton Box Matters",
+      "excerpt": "Discover why selecting the right mono carton box is crucial for product safety, branding, and customer experience in packaging solutions.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-12.png",
+      "date": "24 July 2025"
     }
   ]
 } 
