@@ -107,6 +107,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-12.png",
       "date": "24 July 2025"
+    },
+     {
+      "id": 13,
+      "slug": "high-quality-medical-packaging-boxes-important",
+      "title": "Why High Quality Medical Packaging Boxes are Important",
+      "excerpt": "Discover the importance of high quality medical packaging boxes in ensuring product safety, hygiene, regulatory compliance, and brand trust in the healthcare industry.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-13.png",
+      "date": "26 July 2025"
     }
   ]
 } 
