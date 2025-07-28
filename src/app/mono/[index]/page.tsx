@@ -1,4 +1,5 @@
 import SlidesContainer from '@/components/slidesContainer'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import projectData from '@/data/mono.json'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -39,8 +40,22 @@ export default async function Page({ params }: PageProps) {
     const index = projectData.indexOf(project);
     
     return (
-        <main className='redish_section'>
-            <SlidesContainer currentProject={index} projectData={projectData} />
-        </main>
+        <>
+            <SchemaMarkup 
+                project={project} 
+                category="Mono Carton Packaging"
+                breadcrumbName="Mono Carton Boxes"
+                breadcrumbPath="mono"
+                includeProduct={true}
+                includeService={true}
+                includeRating={true}
+                serviceName="Custom Mono Carton Box Manufacturing"
+                serviceDescription="Professional mono carton box manufacturing services in India. Lightweight, customizable packaging solutions perfect for cosmetics, food, pharmaceuticals, and electronics with premium printing and fast delivery."
+                pageType="product"
+            />
+            <main className='redish_section'>
+                <SlidesContainer currentProject={index} projectData={projectData} />
+            </main>
+        </>
     )
 }

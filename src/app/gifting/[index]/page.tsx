@@ -1,4 +1,5 @@
 import SlidesContainer from '@/components/slidesContainer'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import projectData from '@/data/gifting.json'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -39,8 +40,22 @@ export default async function Page({ params }: PageProps) {
     const index = projectData.indexOf(project);
     
     return (
-        <main className='redish_section'>
-            <SlidesContainer currentProject={index} projectData={projectData} />
-        </main>
+        <>
+            <SchemaMarkup 
+                project={project} 
+                category="Premium Gifting Solutions"
+                breadcrumbName="Gifting Packaging"
+                breadcrumbPath="gifting"
+                includeProduct={true}
+                includeService={true}
+                includeRating={true}
+                serviceName="Custom Corporate Gifting Services"
+                serviceDescription="Thoughtful and sustainable corporate gifting solutions in India. Custom gift packaging, hampers, and memorable gifting experiences for events, employee appreciation, and client relationships."
+                pageType="product"
+            />
+            <main className='redish_section'>
+                <SlidesContainer currentProject={index} projectData={projectData} />
+            </main>
+        </>
     )
 }
