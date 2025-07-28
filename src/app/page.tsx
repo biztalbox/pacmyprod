@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <>
       <SchemaMarkup 
-        category="Premium Packaging & Printing Services"
+        category="Premium Packaging & Corporate Gifting Services"
         breadcrumbName="Home"
         breadcrumbPath=""
         includeProduct={false}
         includeService={true}
         includeRating={true}
-        serviceName="Premium Packaging & Printing Solutions"
-        serviceDescription="Leading provider of premium packaging and printing solutions in India. Specializing in mono carton boxes, kappa board packaging, corporate gifting, and custom luxury packaging with eco-friendly materials and premium finishes."
+        serviceName="Premium Packaging & Corporate Gifting Solutions"
+        serviceDescription="Leading provider of premium packaging and corporate gifting solutions in India. Specializing in mono carton boxes, kappa board packaging, corporate gifting, and custom luxury packaging with eco-friendly materials and premium finishes."
         pageType="home"
       />
       <main>

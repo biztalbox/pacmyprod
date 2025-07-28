@@ -128,22 +128,6 @@ function generateServiceSchema(
     };
 }
 
-function generateAggregateRatingSchema(): object {
-    return {
-        "@context": "https://schema.org",
-        "@type": "AggregateRating",
-        "itemReviewed": {
-            "@type": "Organization",
-            "name": "Pac My Product",
-            "url": "https://pacmyproduct.com"
-        },
-        "ratingValue": "4.8",
-        "reviewCount": "289",
-        "bestRating": "5",
-        "worstRating": "1"
-    };
-}
-
 function generateBreadcrumbSchema(
     project: SchemaData | undefined, 
     breadcrumbName: string, 
@@ -197,13 +181,6 @@ function generateOrganizationSchema(): object {
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "IN"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "289",
-            "bestRating": "5",
-            "worstRating": "1"
         }
     };
 }
@@ -239,12 +216,6 @@ export default function SchemaMarkup({
     if (includeService) {
         const serviceSchema = generateServiceSchema(defaultServiceName, defaultServiceDescription, category);
         schemas.push(serviceSchema);
-    }
-    
-    // Add standalone aggregate rating if includeRating is true and no product
-    if (includeRating && (!project || !includeProduct)) {
-        const ratingSchema = generateAggregateRatingSchema();
-        schemas.push(ratingSchema);
     }
 
     return (
