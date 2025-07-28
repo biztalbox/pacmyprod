@@ -71,6 +71,51 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-8.png",
       "date": "12 July 2025"
+    },
+    {
+      "id": 9,
+      "slug": "premium-brands-packaging-over-ads",
+      "title": "Why Premium Brands Invest More in Packaging than in Advertising",
+      "excerpt": "Premium brands invest in packaging over advertising to enhance customer experience, build trust, and create lasting brand impressions at first glance.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-9.png",
+      "date": "15 July 2025"
+    },
+       {
+      "id": 10,
+      "slug": "custom-printed-packaging-india",
+      "title": "Why Your Brand Needs Custom Printed Packaging in India",
+      "excerpt": " Discover why custom printed packaging in India boosts brand identity, enhances customer experience, and sets your products apart in a competitive market.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-10.png",
+      "date": "18 July 2025"
+    },
+      {
+      "id": 11,
+      "slug": "premium-festive-gift-boxes-delhi",
+      "title": "Premium Festive Gift Boxes in Delhi Boxed in Celebration",
+      "excerpt": "Celebrate in style with premium festive gift boxes in Delhi. Thoughtfully curated hampers, perfect for every occasion. Order now for doorstep delivery!",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-11.png",
+      "date": "22 July 2025"
+    },
+    {
+      "id": 12,
+      "slug": "right-mono-carton-box-importance",
+      "title": "Why Choosing the Right Mono Carton Box Matters",
+      "excerpt": "Discover why selecting the right mono carton box is crucial for product safety, branding, and customer experience in packaging solutions.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-12.png",
+      "date": "24 July 2025"
+    },
+     {
+      "id": 13,
+      "slug": "high-quality-medical-packaging-boxes-important",
+      "title": "Why High Quality Medical Packaging Boxes are Important",
+      "excerpt": "Discover the importance of high quality medical packaging boxes in ensuring product safety, hygiene, regulatory compliance, and brand trust in the healthcare industry.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-13.png",
+      "date": "26 July 2025"
     }
   ]
 } 
