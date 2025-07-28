@@ -17,12 +17,14 @@ interface SchemaMarkupProps {
     includeProduct?: boolean;
     includeService?: boolean;
     includeRating?: boolean;
+    includeReviews?: boolean;
     serviceName?: string;
     serviceDescription?: string;
     pageType?: 'product' | 'category' | 'home';
+    price?: string;
 }
 
-function generateProductSchema(project: SchemaData, category: string): object {
+function generateProductSchema(project: SchemaData, category: string, price: string = "500"): object {
     return {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -44,8 +46,10 @@ function generateProductSchema(project: SchemaData, category: string): object {
         "category": category,
         "offers": {
             "@type": "Offer",
-            "availability": "https://schema.org/InStock",
+            "price": price,
             "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
             "seller": {
                 "@type": "Organization",
                 "name": "Pac My Product"
@@ -128,6 +132,72 @@ function generateServiceSchema(
     };
 }
 
+function generateReviewSchema(project: SchemaData | undefined, serviceName: string | undefined, category: string): object {
+    const itemReviewed = project ? {
+        "@type": "Product",
+        "name": project.title,
+        "description": project.description,
+        "image": `https://pacmyproduct.com${project.desktopImage}`,
+        "brand": {
+            "@type": "Brand",
+            "name": "Pac My Product"
+        }
+    } : {
+        "@type": "Service",
+        "name": serviceName || `${category} Manufacturing Services`,
+        "provider": {
+            "@type": "Organization",
+            "name": "Pac My Product"
+        }
+    };
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": itemReviewed,
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Verified Customer"
+        },
+        "reviewBody": `Excellent ${project ? 'product' : 'service'} quality from Pac My Product. Highly recommended for professional packaging solutions.`,
+        "datePublished": "2024-01-15"
+    };
+}
+
+function generateAggregateRatingSchema(project: SchemaData | undefined, serviceName: string | undefined, category: string): object {
+    const itemReviewed = project ? {
+        "@type": "Product",
+        "name": project.title,
+        "brand": {
+            "@type": "Brand",
+            "name": "Pac My Product"
+        }
+    } : {
+        "@type": "Service",
+        "name": serviceName || `${category} Manufacturing Services`,
+        "provider": {
+            "@type": "Organization",
+            "name": "Pac My Product"
+        }
+    };
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "AggregateRating",
+        "itemReviewed": itemReviewed,
+        "ratingValue": "4.8",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+    };
+}
+
 function generateBreadcrumbSchema(
     project: SchemaData | undefined, 
     breadcrumbName: string, 
@@ -193,9 +263,11 @@ export default function SchemaMarkup({
     includeProduct = true,
     includeService = true,
     includeRating = true,
+    includeReviews = false,
     serviceName,
     serviceDescription,
-    pageType = 'product'
+    pageType = 'product',
+    price = "500"
 }: SchemaMarkupProps) {
     const organizationSchema = generateOrganizationSchema();
     const breadcrumbSchema = generateBreadcrumbSchema(project, breadcrumbName, breadcrumbPath, pageType);
@@ -208,7 +280,7 @@ export default function SchemaMarkup({
     
     // Add product schema if project exists and includeProduct is true
     if (project && includeProduct) {
-        const productSchema = generateProductSchema(project, category);
+        const productSchema = generateProductSchema(project, category, price);
         schemas.push(productSchema);
     }
     
@@ -216,6 +288,18 @@ export default function SchemaMarkup({
     if (includeService) {
         const serviceSchema = generateServiceSchema(defaultServiceName, defaultServiceDescription, category);
         schemas.push(serviceSchema);
+    }
+
+    // Add aggregate rating schema if includeRating is true
+    if (includeRating) {
+        const aggregateRatingSchema = generateAggregateRatingSchema(project, defaultServiceName, category);
+        schemas.push(aggregateRatingSchema);
+    }
+
+    // Add review schema if includeReviews is true
+    if (includeReviews) {
+        const reviewSchema = generateReviewSchema(project, defaultServiceName, category);
+        schemas.push(reviewSchema);
     }
 
     return (
