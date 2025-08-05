@@ -116,6 +116,15 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-13.png",
       "date": "26 July 2025"
+    },
+     {
+      "id": 14,
+      "slug": "great-food-packaging-design",
+      "title": "The Secret Sauce Behind Great Food Packaging Design",
+      "excerpt": "Discover how great food packaging design tells stories, drives impulse purchases, and positions your brand in a competitive marketplace.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-14.png",
+      "date": "2 August 2025"
     }
   ]
 } 
