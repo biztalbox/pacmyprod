@@ -1,4 +1,5 @@
 import HeroPackaging from '@/components/HeroPackaging'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react'
@@ -10,6 +11,17 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (<>
+    <SchemaMarkup 
+      category="Packaging Manufacturing Services"
+      breadcrumbName="Packaging Solutions"
+      breadcrumbPath="packaging"
+      includeProduct={false}
+      includeService={true}
+      includeRating={true}
+      serviceName="Complete Packaging Solutions in India"
+      serviceDescription="Comprehensive packaging manufacturing services including mono carton boxes and kappa board boxes. Custom design, premium printing, bulk manufacturing, and fast delivery across India for all industries."
+      pageType="category"
+    />
     <HeroPackaging />
     <section className='py-16 text-foreground'>
         

@@ -1,4 +1,5 @@
 import SlidesContainer from '@/components/slidesContainer'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import projectData from '@/data/kappa.json'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -39,8 +40,22 @@ export default async function Page({ params }: PageProps) {
     const index = projectData.indexOf(project);
     
     return (
-        <main className='redish_section'>
-            <SlidesContainer currentProject={index} projectData={projectData} />
-        </main>
+        <>
+            <SchemaMarkup 
+                project={project} 
+                category="Kappa Board Packaging"
+                breadcrumbName="Kappa Packaging Boxes"
+                breadcrumbPath="kappa"
+                includeProduct={true}
+                includeService={true}
+                includeRating={true}
+                serviceName="Premium Kappa Board Box Manufacturing"
+                serviceDescription="Heavy-duty kappa board packaging manufacturing in India. Durable, strong packaging solutions ideal for electronics, automotive parts, and premium products requiring extra protection during shipping."
+                pageType="product"
+            />
+            <main className='redish_section'>
+                <SlidesContainer currentProject={index} projectData={projectData} />
+            </main>
+        </>
     )
 }
