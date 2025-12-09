@@ -116,6 +116,51 @@
       "content": "Full blog post content would go here...",
       "image": "/blog/article-13.png",
       "date": "26 July 2025"
+    },
+     {
+      "id": 14,
+      "slug": "great-food-packaging-design",
+      "title": "The Secret Sauce Behind Great Food Packaging Design",
+      "excerpt": "Discover how great food packaging design tells stories, drives impulse purchases, and positions your brand in a competitive marketplace.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/article-14.png",
+      "date": "2 August 2025"
+    },
+     {
+      "id": 15,
+      "slug": "kappa-board-box-rigid-packaging",
+      "title": "Kappa Box Manufacturer Delhi | India’s Premium Kappa Boxes",
+      "excerpt": "Leading kappa box manufacturer in Delhi & India. We provide custom rigid/kappa boxes with high quality, fast delivery & competitive pricing nationwide.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/kappa box article-15.webp",
+      "date": "13 October 2025"
+    },   
+     {
+      "id": 16,
+      "slug": "pharmaceutical-carton-box-suppliers-india",
+      "title": "Top Pharmaceutical Carton Box Suppliers in India: Ensuring Safe & Reliable Packaging",
+      "excerpt": "Discover how pharmaceutical packaging plays an essential role in medicine safety, brand integrity, and consumer trust. Learn about India's leading suppliers and innovations.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/Pharmaceutical Carton Box Suppliers in India.webp",
+      "date": "26 October 2025"
+    },
+     {
+      "id": 17,
+      "slug": "delhi-automobile-box-packaging-manufacturers",
+      "title": "Delhi Automobile Box Packaging Manufacturers: An Emerging Destination for Automotive Packaging Solutions",
+      "excerpt": "Explore Delhi's growing automobile packaging industry. From custom car packaging to export-grade solutions, find the right packaging manufacturer for your automotive products.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/Delhi Automobile Box Packaging Manufacturers.webp",
+      "date": "5 November 2025"
+    },
+     {
+      "id": 18,
+      "slug": "mono-carton-box-manufacturer-in-delhi",
+      "title": "Mono Carton Box Manufacturer in Delhi | Custom Packaging",
+      "excerpt": "Top mono carton box manufacturer in Delhi offering custom, durable and high-quality packaging solutions for all industries. Affordable rates and fast delivery.",
+      "content": "Full blog post content would go here...",
+      "image": "/blog/Mono Carton Box Manufacturer in Delhi  Custom Packaging.webp",
+      "date": "12 November 2025"
     }
   ]
 } 
