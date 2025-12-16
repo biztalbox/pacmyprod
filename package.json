@@ -16,7 +16,7 @@
     "@vercel/analytics": "^1.5.0",
     "global": "^4.4.0",
     "gsap": "^3.12.7",
-    "next": "15.1.7",
+    "next": "15.1.11",
     "nodemailer": "^6.10.0",
     "nprogress": "^0.2.0",
     "react": "^19.0.0",
