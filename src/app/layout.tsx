@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react"
 import Script from "next/script";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Pack My Product",
@@ -47,6 +48,18 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        
+        {/* WhatsApp Floating Button */}
+        <a
+          href="https://wa.me/919599139303?text=Hello!%20I%20would%20like%20to%20enquire%20about%20your%20products."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+          aria-label="Contact us on WhatsApp"
+        >
+          <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7" />
+        </a>
+        
         <Analytics />
       </body>
     </html>
