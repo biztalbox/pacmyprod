@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next'
-import blogData from '@/data/blog.json'
+import { fetchAllPosts } from '@/lib/wordpress'
 import kappaData from '@/data/kappa.json'
 import monoData from '@/data/mono.json'
 import giftingData from '@/data/gifting.json'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://pacmyproduct.com' 
 
 
@@ -84,13 +84,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Add blog post pages
-  const blogRoutes = blogData.blogs.map(blog => ({
-    url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: new Date(blog.date),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  // Fetch WordPress blog posts
+  let blogRoutes: MetadataRoute.Sitemap = []
+  try {
+    const posts = await fetchAllPosts()
+    blogRoutes = posts.map(post => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  } catch (error) {
+    console.error('Error fetching WordPress posts for sitemap:', error)
+    // Continue without blog posts if there's an error
+  }
 
   return [...routes, ...giftingRoutes, ...kappaRoutes, ...monoRoutes, ...blogRoutes]
 } 
